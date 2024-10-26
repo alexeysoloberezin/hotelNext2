@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 const SkipperWidget = ({ onInitSkipper }) => {
   const handleSkipperLoad = () => {
     const initInterval = setInterval(() => {
+      console.log('window.initSkipper', window.initSkipper)
       if (window.initSkipper) {
         clearInterval(initInterval);
 
@@ -36,7 +37,7 @@ const SkipperWidget = ({ onInitSkipper }) => {
 
         onInitSkipper && onInitSkipper();
       }
-    }, 100);
+    }, 500);
   };
 
   return (
