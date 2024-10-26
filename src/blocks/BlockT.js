@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Animation from "../components/Animation";
 import Image from "../components/ui/Image";

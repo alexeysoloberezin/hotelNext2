@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Image from "../components/ui/Image";
 import clsx from "clsx";

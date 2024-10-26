@@ -1,25 +1,18 @@
+'use client';
+
 import React from 'react';
-import MainBlockTemplate from "../components/core/MainBlockTemplate";
-import Interior from "../blocks/Interior";
-import OurMenu from "../blocks/OurMenu";
-import BgImageBlock from "../blocks/BgImageBlock";
-import Button from "../components/ui/Button";
-import SwiperImages from "../blocks/SwiperImages";
-import Animation from '../components/Animation';
-import { Helmet } from "react-helmet-async";
+import MainBlockTemplate from "@/components/core/MainBlockTemplate";
+import Interior from "@/blocks/Interior";
+import OurMenu from "@/blocks/OurMenu";
+import BgImageBlock from "@/blocks/BgImageBlock";
+import Button from "@/components/ui/Button";
+import SwiperImages from "@/blocks/SwiperImages";
+import Animation from '@/components/Animation';
 
 function Restaurant(props) {
   const els = [1, 2, 3]
   return (
     <div>
-      <Helmet>
-        <meta property="og:title" content="Petal Restaurant | IRIS HOTEL Boston – Fine Dining & Events"/>
-        <meta property="og:description" content="Experience exquisite dining at Petal Restaurant, offering gourmet dishes and event hosting services. Enjoy live music and customizable menus for special occasions."/>
-        <title>Petal Restaurant | IRIS HOTEL Boston – Fine Dining & Events</title>
-        <meta name="description"
-              content="Experience exquisite dining at Petal Restaurant, offering gourmet dishes and event hosting services. Enjoy live music and customizable menus for special occasions."/>
-      </Helmet>
-
       <MainBlockTemplate
         title={'Petal Restaurant'}
         video={'/bar.mp4'}

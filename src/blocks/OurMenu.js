@@ -49,21 +49,21 @@ function OurMenu(props) {
                             <SwiperSlide key={index}>
                                 <div className="slide-content min-h-[300px]">
                                     {isDesktop ? (
-                                      <Zoom>
+                                      // <Zoom>
                                           <img
                                             src={`/menu/menu_${index + 1}.jpg`}
                                             className={""}
                                             alt={`Menu ${index + 1}`}
                                           />
-                                      </Zoom>
+                                      // </Zoom>
                                     ) : (
-                                      <Zoom>
+                                      // <Zoom>
                                           <img
                                             src={`/menu/menu_${index + 1}.jpg`}
                                             className={""}
                                             alt={`Menu ${index + 1}`}
                                           />
-                                      </Zoom>
+                                      // </Zoom>
                                     )}
                                 </div>
                             </SwiperSlide>

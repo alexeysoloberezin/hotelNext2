@@ -1,8 +1,10 @@
+'use client'
+
 import React, {useEffect, useState} from 'react';
 import Input from "../components/ui/Input";
 import clsx from 'clsx';
-import { botToken, chatId } from "../utils/telegramData";
-import BtnContacts from "../components/ui/BtnContacts";
+import { botToken, chatId } from "@/utils/telegramData";
+import BtnContacts from "@/components/ui/BtnContacts";
 import { z } from 'zod';
 import Button from "../components/ui/Button";
 

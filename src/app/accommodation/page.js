@@ -1,28 +1,30 @@
 import React from 'react';
-import MainBlockTemplate from "../components/core/MainBlockTemplate";
-import ZBlock from "../blocks/ZBlock";
-import BookNow from "../components/ui/BookNow";
-import Facilities from "../blocks/Facilities";
-import Accommodation2 from "../blocks/Accommodation2";
-import Button from "../components/ui/Button";
-import Arrow from "../components/icon/Arrow";
-import BlockT from "../blocks/BlockT";
-import BgImage from "../blocks/BgImage";
-import Animation from "../components/Animation";
-import GridC from "../blocks/GridC";
-import BaseGrids from "../blocks/BaseGrids";
-import { Helmet } from "react-helmet-async";
+import MainBlockTemplate from "@/components/core/MainBlockTemplate";
+import ZBlock from "@/blocks/ZBlock";
+import BookNow from "@/components/ui/BookNow";
+import Accommodation2 from "@/blocks/Accommodation2";
+import BlockT from "@/blocks/BlockT";
+import BgImage from "@/blocks/BgImage";
+import Animation from "@/components/Animation";
+import GridC from "@/blocks/GridC";
+import BaseGrids from "@/blocks/BaseGrids";
+
+export const metadata = {
+  title: "Accommodation | IRIS HOTEL Boston – Luxury Apartments & Suites",
+  description:
+    "Explore our premium accommodations at IRIS HOTEL Boston, featuring 119 luxurious apartments and suites with modern amenities and elevator access, perfect for both leisure and business stays.",
+  openGraph: {
+    title: "Accommodation | IRIS HOTEL Boston – Luxury Apartments & Suites",
+    description:
+      "Explore our premium accommodations at IRIS HOTEL Boston, featuring 119 luxurious apartments and suites with modern amenities and elevator access, perfect for both leisure and business stays.",
+    url: "https://your-hotel-site.com/accommodation",
+    type: "website",
+  },
+};
 
 function Accommodation(props) {
   return (
     <div>
-      <Helmet>
-        <title>Accommodation | IRIS HOTEL Boston – Luxury Apartments & Suites</title>
-        <meta property="og:title" content={"Accommodation | IRIS HOTEL Boston – Luxury Apartments & Suites"}/>
-        <meta name="description" content="Explore our premium accommodations at IRIS HOTEL Boston, featuring 119 luxurious apartments and suites with modern amenities and elevator access, perfect for both leisure and business stays." />
-        <meta property="og:description"  content="Explore our premium accommodations at IRIS HOTEL Boston, featuring 119 luxurious apartments and suites with modern amenities and elevator access, perfect for both leisure and business stays." />
-      </Helmet>
-
       <MainBlockTemplate
         title={'Accommodation'}
         image={'/acodd.jpg'}
@@ -81,16 +83,11 @@ function Accommodation(props) {
         </Animation>
       </BgImage>
 
-
-
       <GridC
         title={'Awaken your senses'}
         imgTemplate={'/awaken{**}.jpg'}
         text1={'Awaken your senses with the convenience of  a Nespresso coffee maker, allowing you to savor a perfect cup of coffee or espresso at your leisure. Stay connected and entertained with  a Smart TV, providing access to a world  of entertainment and information.'}>
-
       </GridC>
-
-
 
       <BaseGrids imgTemplate={'/take{**}.jpg'} title={'Taking care of you'} texts={[
         'At Iris Hotel, we are dedicated to providing you with a memorable and unparalleled experience',

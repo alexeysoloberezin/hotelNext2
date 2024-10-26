@@ -1,3 +1,5 @@
+'use client';
+
 import React, {useEffect, useRef, useState} from 'react';
 import Header from "./Header";
 import useMediaQuery from "../../hooks/useMediaQuery";

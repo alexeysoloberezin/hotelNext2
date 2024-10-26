@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import clsx from "clsx";
 import Image from "../ui/Image";
@@ -30,13 +32,11 @@ function PerfectGrid({imgTemplate, hideMob}) {
     }>
       {grid.map((el, index) => (
         <div key={index} className={indexClasses[index]}>
-          <Zoom>
             <Image
               noWebp={true}
               animationClass={clsx('', h[index])}
               className={clsx("w-full h-full object-cover",
               )} src={imgTemplate.replace('{**}', index + 1)} alt="bar-img"/>
-          </Zoom>
         </div>
       ))}
     </div>

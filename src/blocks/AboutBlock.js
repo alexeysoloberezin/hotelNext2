@@ -1,7 +1,8 @@
+'use client'
+
 import React from 'react';
 import {Autoplay} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
-import Image from "../components/ui/Image";
 import Animation from "../components/Animation";
 
 function AboutBlock({imgTemplate}) {
@@ -42,9 +43,9 @@ function AboutBlock({imgTemplate}) {
           {arr.map((item, index) => (
             <SwiperSlide key={item}>
               <div className="slide-content">
-                <Image
+                <img
                   src={imgTemplate.replace('{**}', index + 1)}
-                  noWebp={true}
+                  alt={'12'}
                   className={"imgsFull"}
                 />
               </div>

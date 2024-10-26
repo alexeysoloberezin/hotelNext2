@@ -1,7 +1,7 @@
+'use client';
+
 import React from 'react';
-import {Link} from "react-router-dom";
 import Form from "../../blocks/Form";
-import CreatedAt from "./CreatedAt";
 
 const Footer = () => {
   const navItems = [
@@ -77,7 +77,7 @@ const Footer = () => {
             </div> */}
           </div>
           <div>
-            <Form/>
+            <Form />
           </div>
         </div>
         <div className={"mt-[40px] lg:hidden flex justify-between items-end"}>

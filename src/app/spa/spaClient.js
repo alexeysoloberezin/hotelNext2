@@ -1,28 +1,20 @@
+'use client'
+
 import React from 'react';
-import MainBlockTemplate from "../components/core/MainBlockTemplate";
-import Button from "../components/ui/Button";
-import GridEls from "../blocks/GridEls";
-import SpaRoom from "../blocks/SpaRoom";
-import Facials from "../blocks/Facials";
-import Contacts from "../blocks/Contacts";
-import useMediaQuery from "../hooks/useMediaQuery";
-import BookNow from "../components/ui/BookNow";
-import Animation from '../components/Animation';
-import {Helmet} from "react-helmet-async";
+import MainBlockTemplate from "@/components/core/MainBlockTemplate";
+import Button from "@/components/ui/Button";
+import GridEls from "@/blocks/GridEls";
+import SpaRoom from "@/blocks/SpaRoom";
+import Facials from "@/blocks/Facials";
+import Contacts from "@/blocks/Contacts";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import Animation from '@/components/Animation';
 
 function Page(props) {
   const isMobile = useMediaQuery(false, '(max-width: 600px)');
 
   return (
     <div>
-      <Helmet>
-        <meta property="og:title" content="Spa Room | IRIS HOTEL Boston – Relaxation & Facial Treatments"/>
-        <meta property="og:description" content="Indulge in relaxation at the Spa Room in IRIS HOTEL Boston. Treat yourself to a range of facial treatments and rejuvenating experiences in a serene environment."/>
-        <title> Spa Room | IRIS HOTEL Boston – Relaxation & Facial Treatments</title>
-        <meta name="description"
-              content=" Indulge in relaxation at the Spa Room in IRIS HOTEL Boston. Treat yourself to a range of facial treatments and rejuvenating experiences in a serene environment."/>
-      </Helmet>
-
       <MainBlockTemplate
         title={'Spa Room'}
         video={'/spa.mp4'}

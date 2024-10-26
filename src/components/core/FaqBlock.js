@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import FaqItem from "../ui/FaqItem";
 import Tags from "../ui/Tags";

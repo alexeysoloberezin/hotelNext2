@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import InputMask from "react-input-mask"
+// import InputMask from "react-input-mask"
 import clsx from "clsx";
 
 function Input({placeholder,label, value, error, onChange, name, mask}) {
@@ -9,16 +11,16 @@ function Input({placeholder,label, value, error, onChange, name, mask}) {
         ? <span className={"text-red font-medium"} style={{fontSize: '12px'}}>{error}</span>
         : null}
 
-      {mask ?
-        <InputMask
-          mask={mask}
-          value={value}
-          onChange={onChange}
-          name={name}
-          placeholder={placeholder}
-          style={{color: 'var(--black)', outline: 'none', border: 'none', height: '28px',background: 'transparent', width: '100%'}}
-        />
-        :
+      {/*{mask ?*/}
+      {/*  <InputMask*/}
+      {/*    mask={mask}*/}
+      {/*    value={value}*/}
+      {/*    onChange={onChange}*/}
+      {/*    name={name}*/}
+      {/*    placeholder={placeholder}*/}
+      {/*    style={{color: 'var(--black)', outline: 'none', border: 'none', height: '28px',background: 'transparent', width: '100%'}}*/}
+      {/*  />*/}
+      {/*  :*/}
         <input
           value={value}
           onChange={onChange}
@@ -26,7 +28,7 @@ function Input({placeholder,label, value, error, onChange, name, mask}) {
           placeholder={placeholder}
           style={{color: 'var(--black)', outline: 'none', border: 'none',height: '28px', background: 'transparent', width: '100%'}}
         />
-      }
+      {/*}*/}
     </label>
   );
 }

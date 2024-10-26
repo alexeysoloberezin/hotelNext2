@@ -1,9 +1,9 @@
+'use client';
+
 import React from 'react';
 import clsx from "clsx";
-import Image from "../ui/Image";
 import Animation from '../Animation';
-import {Link} from "react-router-dom";
-  import Zoom from "react-medium-image-zoom";
+import Zoom from "react-medium-image-zoom";
 
 function GridBlockAboutUs({data, imgTemplate, type = 'type1', hideMob}) {
   const classes = {
@@ -23,39 +23,35 @@ function GridBlockAboutUs({data, imgTemplate, type = 'type1', hideMob}) {
     })}>
       <div className={"flex flex-col gap-[20px]"}>
         <Animation>
-          <Zoom>
-            <Image className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 1)}
-                   alt=""/>
-            {data[0] && <h4 className={clsx(textClass)}>{data[0]}</h4>}
-          </Zoom>
+          <img className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 1)}
+               alt=""/>
+          {data[0] && <h4 className={clsx(textClass)}>{data[0]}</h4>}
         </Animation>
         <Animation delay={'.2s'}>
           <a href={'/spa'}>
-            <Image className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 2)}
-                   alt=""/>
+            <img className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 2)}
+                 alt=""/>
             {data[1] && <h4 className={clsx(textClass)}>{data[1]}</h4>}
           </a>
         </Animation>
       </div>
       <Animation className={"flex flex-col gap-[20px]"} delay={'.4s'}>
-        <Zoom>
-          <Image className={clsx(classes[type]['3'], "w-full object-cover")} src={imgTemplate.replace('{**}', 3)}
-                 alt=""/>
+          <img className={clsx(classes[type]['3'], "w-full object-cover")} src={imgTemplate.replace('{**}', 3)}
+               alt=""/>
           {data[2] && <h4 className={clsx(textClass)}>{data[2]}</h4>}
-        </Zoom>
       </Animation>
       <div className={"flex flex-col gap-[20px]"}>
         <Animation delay={'.5s'}>
           <a href={'/restaurant'}>
-            <Image className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 4)}
-                   alt=""/>
+            <img className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 4)}
+                 alt=""/>
             {data[3] && <h4 className={clsx(textClass)}>{data[3]}</h4>}
           </a>
         </Animation>
         <Animation delay={'.8s'}>
           <a href={'/bar'}>
-            <Image className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 5)}
-                   alt=""/>
+            <img className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 5)}
+                 alt=""/>
             {data[4] && <h4 className={clsx(textClass)}>{data[4]}</h4>}
           </a>
         </Animation>

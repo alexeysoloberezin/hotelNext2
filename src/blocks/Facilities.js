@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import BgImageBlock from "./BgImageBlock";
 import Animation from "../components/Animation";

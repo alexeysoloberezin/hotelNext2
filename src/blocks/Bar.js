@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import SectionHeader from "../components/ui/SectionHeader";
 import PerfectGrid from "../components/core/PerfectGrid";

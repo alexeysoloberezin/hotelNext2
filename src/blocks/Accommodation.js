@@ -1,8 +1,10 @@
+'use client'
+
 import React from 'react';
 import SectionHeader from "../components/ui/SectionHeader";
 import Slider from "../components/ui/SwiperBlock";
 import BookNow from "../components/ui/BookNow";
-import {accommodationData} from "../data/accod";
+import {accommodationData} from "@/data/accod";
 
 
 function Accommodation(props) {

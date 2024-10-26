@@ -1,22 +1,25 @@
 import React from 'react';
-import MainBlockTemplate from "../components/core/MainBlockTemplate";
-import Nectar from "../blocks/Nectar";
-import Grid121 from "../components/core/Grid121";
-import SectionHeader from "../components/ui/SectionHeader";
-import BarMenu from "../blocks/BarMenu";
-import BgImageBlock from "../blocks/BgImageBlock";
-import { Helmet } from "react-helmet-async";
+import MainBlockTemplate from "@/components/core/MainBlockTemplate";
+import Nectar from "@/blocks/Nectar";
+import Grid121 from "@/components/core/Grid121";
+import BarMenu from "@/blocks/BarMenu";
+
+export const metadata = {
+  title: "Nectar Bar | IRIS HOTEL Boston – Cocktails, Coffee & More",
+  description:
+    "Unwind at Nectar Bar in IRIS HOTEL Boston, featuring an array of crafted cocktails, premium coffee, and teas. A perfect spot for socializing and relaxation.",
+  openGraph: {
+    title: "Nectar Bar | IRIS HOTEL Boston – Cocktails, Coffee & More",
+    description:
+      "Unwind at Nectar Bar in IRIS HOTEL Boston, featuring an array of crafted cocktails, premium coffee, and teas. A perfect spot for socializing and relaxation.",
+    url: "https://your-hotel-site.com/nectar-bar",
+    type: "website",
+  },
+};
 
 function Bar(props) {
   return (
     <div>
-      <Helmet>
-        <title>Nectar Bar | IRIS HOTEL Boston – Cocktails, Coffee & More</title>
-        <meta property="og:title" content="Nectar Bar | IRIS HOTEL Boston – Cocktails, Coffee & More" />
-        <meta  property="og:description" content="Unwind at Nectar Bar in IRIS HOTEL Boston, featuring an array of crafted cocktails, premium coffee, and teas. A perfect spot for socializing and relaxation." />
-        <meta name="description" content="Unwind at Nectar Bar in IRIS HOTEL Boston, featuring an array of crafted cocktails, premium coffee, and teas. A perfect spot for socializing and relaxation." />
-      </Helmet>
-
       <MainBlockTemplate
         title={'Nectar Bar'}
         image={'/barBg.jpg'}

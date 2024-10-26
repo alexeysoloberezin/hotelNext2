@@ -1,12 +1,11 @@
+'use client';
+
 import React, {useEffect, useState} from 'react';
-import {handleScroll} from "../../utils/handleScroll";
+import {handleScroll} from "@/utils/handleScroll";
 import clsx from 'clsx'
-import {Link} from 'react-router-dom'
 import Arrow from "../icon/Arrow";
-import Button from "../ui/Button";
-import Image from "../ui/Image";
-import useMediaQuery from "../../hooks/useMediaQuery";
-import BookNow from "../ui/BookNow";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import BookNow from "@/components/ui/BookNow";
 
 const Header = ({transparent}) => {
   const [isActiveBurger, setIsActiveBurger] = useState(false)

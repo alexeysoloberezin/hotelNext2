@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {Autoplay, EffectFade} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
