@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+<!--    <meta-->
+<!--      name="description"-->
+<!--      content="Whether you're traveling for business or a romantic getaway, experience the elegance of comfort at Iris Hotel Boston, nestled in the safest neighborhood of Boston-Brookline. Enjoy 120 luxurious apartments, a restaurant, bar, and spa. Located at 30 Webster St, Brookline, MA 02446. Open 24/7. Check-in at 3:00 PM, check-out at 11:00 AM. Find us on Google Maps."-->
+<!--    />-->
+    <meta name="keywords" content="Boston hotel, luxury apartments Boston, Boston spa, Boston restaurant, 24/7 hotel Boston, Iris Hotel Boston, bar in Boston, hotel near me">
+    <meta property="og:title" content="Iris Spa Room">
+    <meta property="og:description" content="Whether you're traveling for business or a romantic getaway, experience the elegance of comfort at Iris Hotel Boston">
+    <meta property="og:image" content="%PUBLIC_URL%/about3.jpg">
+    <meta property="og:url" content="https://irishotelboston.com/">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
+    <link rel="mask-icon" href="%PUBLIC_URL%/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <script>
+      "use strict";var Y=Object.defineProperty;var z=(e,n,i)=>n in e?Y(e,n,{enumerable:!0,configurable:!0,writable:!0,value:i}):e[n]=i;var d=(e,n,i)=>z(e,typeof n!="symbol"?n+"":n,i);class H{constructor(n=!0){d(this,"_eventMap");d(this,"_recalculateExport");d(this,"_exports");d(this,"_addTimestamps");this._eventMap=new Map,this._recalculateExport=!0,this._exports=[],this._addTimestamps=n}track(n,i){this._addTimestamps&&(i.eventTimestamp=new Date().toISOString()),this._eventMap.set(n,i),this._recalculateExport=!0}getEvent(n){return this._eventMap.get(n)}export(){if(this._recalculateExport){this._exports=[];const n=this._eventMap[Symbol.iterator]();for(const[i,a]of n)this._exports.push({eventName:i,payload:a})}return this._recalculateExport=!1,this._exports}clear(){this._recalculateExport=!0,this._exports=[],this._eventMap.clear()}}var m=(e=>(e.OVERLAY="overlay",e.SIDERAIL="sideRail",e))(m||{});const W={WIDGET_LOAD_TIME:"Widget Load Time",INITIAL_INTERACTION_TIME:"Initial Interaction Time",SCRIPT_INSERTION_TIME:"Script Insertion Time"},q=3e4,O=700,G=1200,Q=1e3,y=new H,F=Date.now();let N,_,R,E,k=!0,$=!1,u=!1,l=null,v=null,x=!1,p=null;window.initSkipper=et;function Z(e,n,i){const{primaryColor:a,primaryFont:h,secondaryFont:o}=n,w=i===m.OVERLAY?1e3:500,T=i===m.OVERLAY?"margin: auto !important; left: 0 !important; bottom: 0 !important; max-height: 740px !important;":"",I='<div id="skipper-interstitial-container"><svg id="interstitial-animation" width="48" height="16" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="cw-circle-container"><circle id="circle-fill" cx="24" cy="8" r="8"/><circle id="circle-stroke" cx="8" cy="8" r="7" stroke-width="2"/></g></svg><p id="message">Loading...</p></div>',g=`@media only screen and (min-width: 768px) {#skipper-interstitial-container {width: ${w}px !important; ${T}}} #circle-stroke{animation: ltor 1.2s ease-in-out infinite;animation-direction: alternate;stroke: ${a||"#2563EB"}}#circle-fill{animation: rtol 1.2s ease-in-out infinite;animation-direction: alternate;fill: ${a||"#2563EB"}}@keyframes ltor{20%{transform: translateX(-4px)}50%{transform: translateX(20px)}80%{transform: translateX(-4px)}}@keyframes rtol{20%{transform: translateX(4px)}50%{transform: translateX(-20px)}80%{transform: translateX(4px)}}.cash-widget-overlay-container:before{content: "";width: 100%;height: 100%;background-color: #00000080;position: fixed;bottom: 0;left: 0;right: 0;top: 0;z-index: 99}`;document.getElementById(e).insertAdjacentHTML("afterend",I),l=document.getElementById("skipper-interstitial-container"),l.style=`position: fixed; height: 100vh; background: #FFFFFF; z-index: 2147483647; overflow: auto; display: initial; width: 100vw; width: -webkit-fill-available; width: -moz-available; width: stretch; top: 0px; left: initial; right: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: ${h}, ${o}, 'Verdana'; text-align: center;`;const c=document.createElement("style");c.textContent=g,document.head.append(c),document.body.classList.add("cash-widget-overlay-container")}function J(){const e=new URL(window.location.href);return e.searchParams.get("sbe_openBE")==="true"||e.searchParams.get("openBE")==="true"}function K({hotelId:e,groupId:n,brandId:i}){const a=()=>{const o=[];return n&&o.push(`group-${n}`),i&&o.push(`brand-${i}`),e&&o.push(`hotel-${e}`),o.join("--")};return localStorage.getItem(`${a}_display`)}const tt=(e,n={},i)=>()=>{u||(_=Date.now(),y.track(W.INITIAL_INTERACTION_TIME,{interactionTime:_-F}),Z(e,n,i)),u=!0,x=!0};async function P(){var e;u&&window.openWidget&&$&&k&&(await window.openWidget(),(e=l==null?void 0:l.remove)==null||e.call(l))}function et(e){const{target:n,style:i,fallbackUrl:a,isDynamic:h=!1,dynamicQueryInterval:o=Q,renderAs:w,selfHosted:T}=e,{targetClasses:I=[],targetIds:g=[]}=e,c=new URL(window.location.href).searchParams.get("sbe_renderAs"),L=c||null||(T?m.OVERLAY:w||m.OVERLAY);e.renderAs=L;const A=tt(n,i,L);(J()||K({...e,type:"display"})==="collapsed")&&(setTimeout(()=>{const t=new CustomEvent("openBE");document.dispatchEvent(t)}),setTimeout(()=>{E?u=!0:A()},O));const U=()=>{R=Date.now();const t=document.createElement("script"),s="production";{let r;switch(s){case"production":r="widget.skipperhospitality.com";break;case"stage":r="widget-stage.skipperhospitality.com";break;case"uat":r="widget-uat.skipperhospitality.com";break;default:r="widget-dev.skipperhospitality.com";break}t.src=`https://${r}/cash-sdk.umd.js`}t.type="module",t.addEventListener("load",()=>{E=Date.now();const r=new CustomEvent("skipper-hydrated",{bubbles:!0});t.dispatchEvent(r)}),setTimeout(()=>{E||(k=!1,setTimeout(async()=>{k=!0,await P()},G))},O),setTimeout(()=>{u&&x&&a&&window.open(a,"_blank")},q),document.head.appendChild(t)};document.addEventListener("DOMContentLoaded",()=>{N=Date.now()});const b=new AbortController,V=t=>{document.addEventListener(t,()=>{b.abort(),U()},{once:!0,signal:b.signal})};["mousedown","scroll","keydown","touchstart","mousemove","openBE"].forEach(t=>V(t)),document.addEventListener("skipper-hydrated",async()=>{window._initSkipper&&await window._initSkipper(e,v)},{once:!0}),document.addEventListener("skipper-initialized",async()=>{p&&clearInterval(p),f.forEach(t=>{t.removeEventListener("click",S)}),x=!1,$=!0,window.primeTracking(y.export(),{pageLoadTime:F,initialUserInteractionTime:_,skipperScriptInsertionTime:R,skipperScriptLoadedTime:E,DOMContentLoadedTime:N}),await P(),y.clear()},{once:!0});function S(t){v=t.currentTarget?t.currentTarget:v,p&&clearInterval(p),t.preventDefault(),A()}const C=(t,s)=>{let r=[];return typeof t=="string"&&(t=[t]),t.length&&(r=Array.from(document.querySelectorAll(t.map(j=>`${s==="class"?".":"#"}${j}`).join(",")))),r},X=["[data-skipper-internal-link]","[href*=sbe_internalLink]"],M=()=>{var t;return new Set([...C(I,"class"),...C(g,"id"),...((t=document.querySelectorAll(X.join(",")))==null?void 0:t.values())||[]])},D=t=>t.addEventListener("click",S),f=M();for(const t of f)D(t);h&&typeof o=="number"&&(p=setInterval(()=>{const t=M();for(const s of f)t.delete(s);for(const s of t)f.add(s),D(s)},o))}
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V60H539FB"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-6V60H539FB'); </script>
+
+    <script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=qCL2jCKMnOwb"></script>
+<!--    <title>Iris Hotel Boston - Luxury Rooms, 24/7 Services, Restaurant, Bar & Spa</title>-->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
