@@ -16,7 +16,7 @@ import Facilities from "../blocks/Facilities";
 // };
 
 export const metadata = {
-  title: "Test Iris Hotel Boston - Luxury Rooms, 24/7 Services, Restaurant, Bar & Spa",
+  title: "Iris Hotel Boston - Luxury Rooms, 24/7 Services, Restaurant, Bar & Spa",
   description: "Whether you\\'re traveling for business or a romantic getaway, experience the elegance of comfort at Iris Hotel Boston, nestled in the safest neighborhood of Boston-Brookline. Enjoy 120 luxurious apartments, a restaurant, bar, and spa. Located at 30 Webster St, Brookline, MA 02446. Open 24/7. Check-in at 3:00 PM, check-out at 11:00 AM. Find us on Google Maps.",
 };
 
