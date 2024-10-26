@@ -73,14 +73,13 @@ function Accommodation(props) {
       </BlockT>
 
       <BgImage img={'/bg5.jpg'}>
-        <Animation>
           <div
+            data-aos={'fade-up'} data-aos-delay={'150'}
             className={"md:text-[30px] text-[18px] md:max-w-[771px] max-w-[205px] text-center leading-normal max-w-[771px]"}>
             Sink into our plush, luxuriously appointed bedding, which promises a restful night's sleep like no other.
             Wrap yourself in the sumptuous bathrobes and slip into the soft slippers provided for your ultimate
             relaxation.
           </div>
-        </Animation>
       </BgImage>
 
       <GridC

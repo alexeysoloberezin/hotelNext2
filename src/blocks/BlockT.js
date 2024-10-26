@@ -13,51 +13,48 @@ function BlockT({title, children, imgTemplate}) {
       <div className="container">
         <div className="lg:flex gap-[54px]">
           <div className={""}>
-            <Animation>
+            <div data-aos={'fade-up'} data-aos-delay={'0'}>
               <h2 className={'font2'}>{title}</h2>
-            </Animation>
-            <Animation className={"xl:mt-[50px] mt-[25px]"}>
+            </div>
+            <div data-aos={'fade-up'} data-aos-delay={'150'} className={"xl:mt-[50px] mt-[25px]"}>
               <div
                 className={"xl:text-[18px] lg:text-[16px] md:text-[14px] lg:leading-snug"}>
                 {children}
               </div>
-            </Animation>
+            </div>
           </div>
           {!isMob ? (
-            <div className={"flex gap-[20px] w-full lg:pt-0 md:pt-[30px]"}>
-              <div className={"flex flex-col xl:w-[333px] w-[250px] gap-[20px]"}>
-                <Image
+            <div className={"flex gap-[20px]  w-full lg:pt-0 md:pt-[30px]"}>
+              <div className={"flex flex-col  xl:w-[333px] w-[250px] gap-[20px]"}>
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'0'}
                   alt={"image"}
-                  noWebp={true}
                   className={"h-full w-full object-cover"}
-                  animationClass={"w-full h-full object-cover"}
                   src={imgTemplate.replace('{**}', 1)}
-                ></Image>
-                <Image
+                ></img>
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'0'}
                   alt={"image"}
                   className={"h-full w-full object-cover"}
-                  animationClass={"w-full h-full object-cover"}
-                  noWebp={true}
                   src={imgTemplate.replace('{**}', 2)}
-                ></Image>
+                ></img>
               </div>
               <div>
-                <Image
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'0'}
                   alt={"image"}
-                  noWebp={true}
                   className={"h-full w-full object-cover"}
-                  animationClass={"h-full w-[420px]"}
                   src={imgTemplate.replace('{**}', 3)}
-                ></Image>
+                ></img>
               </div>
             </div>
           ) : (
-            <Image
+            <img
+              data-aos={'fade-up'} data-aos-delay={'0'}
               alt={"image"}
-              noWebp={true}
               className={"h-full w-full object-cover mt-[50px]"}
               src={imgTemplate.replace('{**}', 4)}
-            ></Image>
+            ></img>
           )}
         </div>
       </div>

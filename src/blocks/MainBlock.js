@@ -19,7 +19,7 @@ function MainBlock({skipperIsReady, onInitSkipper}) {
       }}
       description={' where design meets comfort'}
     >
-      <div className={clsx('duration-300 transition',{'opacity-0': !skipperIsReady})}><BookNow /></div>
+      <div className={clsx('duration-300 transition')}><BookNow /></div>
     </MainBlockTemplate>
   );
 }

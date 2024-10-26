@@ -32,14 +32,13 @@ function SectionHeader({
   }
   return (
     <div className={clsx(' md:mb-[50px] mb-[30px]', colors[color].text)}>
-      <Animation>
-        <h2 className={clsx("text-nowrap md:min-w-[34%] text-center mb-[15px]", {'bigMob': bigMob})}>{title}</h2>
-      </Animation>
+      <h2 data-aos={'fade-up'} data-aos-delay={'0'}
+          className={clsx("text-nowrap md:min-w-[34%] text-center mb-[15px]", {'bigMob': bigMob})}>{title}</h2>
 
       <div className={clsx("flex md:items-center md:flex-row flex-col  gap-[20px]", wrapperClassName)}>
-        <Animation delay={'.2s'}>
-          <p className={clsx(classText)}>{text}</p>
-        </Animation>
+
+        <p data-aos={'fade-up'} data-aos-delay={'150'} className={clsx(classText)}>{text}</p>
+
         {mobImage &&
           <Image src={mobImage} noWebp={true} alt="" className={"max-h-[600px] min-h-[340px] object-cover md:hidden"}/>
         }

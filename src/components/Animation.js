@@ -17,7 +17,7 @@ function Animation({children, delay, className, animationClass}) {
     //         {children}
     //     </div>
     // </div>
-    <div className={clsx(className, animationClass)}>
+    <div data-aos={'fade-up'}  className={clsx(className, animationClass)}>
       {children}
     </div>
   );

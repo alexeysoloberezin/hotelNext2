@@ -12,8 +12,8 @@ function Card({title, text, img, txtClass}) {
   return (
     <div
       className={"relative md:min-h-[565px] md:h-auto min-h-[400px] h-[98vw] max-h-[500px] overflow-hidden flex flex-col items-center px-[50px] py-[60px]"}>
-      <Image
-        src={img} noWebp={true} alt={title}
+      <img
+        src={img}  alt={title}
         className={"absolute fullImg bottom-0 left-0"}
       />
       <div className={"relative z-10 text-white text-center"}>

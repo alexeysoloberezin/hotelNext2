@@ -15,7 +15,7 @@ function BgImageBlock({bg, topImg,noWebp, children,href = '', hideBtn}) {
       />
       <div className={clsx("container h-full flex flex-col justify-between relative z-10 items-center md:min-h-[680px] min-h-[580px] gap-[20px]")}>
         {topImg
-          ? <img  src={topImg} alt="topImg" className={"w-fit mx-auto max-w-[169px]"}/>
+          ? <img data-aos={'fade-up'} data-aos-delay={'0'}  src={topImg} alt="topImg" className={"w-fit mx-auto max-w-[169px]"}/>
           : <div></div>
         }
         <Animation >

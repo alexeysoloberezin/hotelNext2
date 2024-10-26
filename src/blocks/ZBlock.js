@@ -18,25 +18,26 @@ function ZBlock({title, text1, text2, imgTemplate, children}) {
       <div className="container">
         <div className="md:grid grid-cols-3 gap-[20px]">
           <div className={"flex flex-col"}>
-            <Animation>
+            <div data-aos={'fade-up'} data-aos-delay={'0'}>
               <h2 className={"bigMob"}>{title}</h2>
-            </Animation>
+            </div>
             <div className={'grow flex  py-[20px]'}>
-              <Animation>
+              <div data-aos={'fade-up'} data-aos-delay={'150'}>
                 <span className={"xl:text-[18px] lg:text-[16px] md:text-[14px] lg:leading-tight leading-none"}>{text1}</span>
-              </Animation>
+              </div>
             </div>
             {!isMob &&
-              <Image
+              <img
+                data-aos={'fade-up'} data-aos-delay={'0'}
                 className={clsx("w-full h-full object-cover",
                 )} src={imgTemplate.replace('{**}', 1)} alt="accom-img"/>
             }
           </div>
           <div>
             {!isMob &&
-              <Image
+              <img
+                data-aos={'fade-up'} data-aos-delay={'0'}
                 className={clsx("w-full h-full object-cover")}
-                animationClass={clsx("w-full h-full object-cover")}
                 src={imgTemplate.replace('{**}', 2)} alt="accom-img"/>
             }
             {isMob && (
@@ -74,7 +75,8 @@ function ZBlock({title, text1, text2, imgTemplate, children}) {
           </div>
           <div className={"lg:flex flex-col"}>
             {!isMob &&
-              <Image
+              <img
+                data-aos={'fade-up'} data-aos-delay={'0'}
                 className={clsx("w-full h-full object-cover",
                 )} src={imgTemplate.replace('{**}', 3)} alt="accom-img"/>
             }

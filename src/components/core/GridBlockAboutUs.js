@@ -22,39 +22,40 @@ function GridBlockAboutUs({data, imgTemplate, type = 'type1', hideMob}) {
       'grid': !hideMob
     })}>
       <div className={"flex flex-col gap-[20px]"}>
-        <Animation>
+        <div data-aos={'fade-up'} data-aos-delay={'0'}>
           <img className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 1)}
                alt=""/>
           {data[0] && <h4 className={clsx(textClass)}>{data[0]}</h4>}
-        </Animation>
-        <Animation delay={'.2s'}>
+        </div>
+        <div data-aos={'fade-up'} data-aos-delay={'150'}>
           <a href={'/spa'}>
             <img className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 2)}
                  alt=""/>
             {data[1] && <h4 className={clsx(textClass)}>{data[1]}</h4>}
           </a>
-        </Animation>
+        </div>
       </div>
-      <Animation className={"flex flex-col gap-[20px]"} delay={'.4s'}>
+      <div data-aos={'fade-up'} data-aos-delay={'300'}
+           className={"flex flex-col gap-[20px]"} >
           <img className={clsx(classes[type]['3'], "w-full object-cover")} src={imgTemplate.replace('{**}', 3)}
                alt=""/>
           {data[2] && <h4 className={clsx(textClass)}>{data[2]}</h4>}
-      </Animation>
+      </div>
       <div className={"flex flex-col gap-[20px]"}>
-        <Animation delay={'.5s'}>
+        <div data-aos={'fade-up'} data-aos-delay={'350'}>
           <a href={'/restaurant'}>
             <img className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 4)}
                  alt=""/>
             {data[3] && <h4 className={clsx(textClass)}>{data[3]}</h4>}
           </a>
-        </Animation>
-        <Animation delay={'.8s'}>
+        </div>
+        <div data-aos={'fade-up'} data-aos-delay={'500'}>
           <a href={'/bar'}>
             <img className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 5)}
                  alt=""/>
             {data[4] && <h4 className={clsx(textClass)}>{data[4]}</h4>}
           </a>
-        </Animation>
+        </div>
       </div>
     </div>
   );

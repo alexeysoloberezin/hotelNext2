@@ -1,4 +1,6 @@
-@import "fonts";
+@use "fonts";
+@import "./blocks/burger";
+@import "./blocks/swiper";
 
 @tailwind base;
 @tailwind components;
@@ -109,13 +111,6 @@ input {
       opacity: 1;
       pointer-events: initial;
     }
-  }
-}
-
-.homePage{
-  [data-aos^=fade][data-aos^=fade]{
-    opacity: 1 !important;
-    transform: none !important;
   }
 }
 
@@ -384,6 +379,4 @@ input::placeholder {
 }
 
 
-@import "./blocks/burger";
-@import "./blocks/swiper";
 

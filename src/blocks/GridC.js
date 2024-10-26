@@ -14,49 +14,45 @@ function ZBlock({title, text1, imgTemplate}) {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-[20px]">
           <div className={"flex flex-col"}>
-            <Animation>
+            <div data-aos={'fade-up'} data-aos-delay={'0'}>
               <h2>{title}</h2>
-            </Animation>
+            </div>
             <div className={'grow flex items-center py-[20px]'}>
-              <Animation>
+              <div data-aos={'fade-up'} data-aos-delay={'150'}>
                 <div
                   className={"xl:text-[18px] lg:text-[16px] md:text-[14px] lg:leading-snug"}>{text1}</div>
-              </Animation>
+              </div>
             </div>
             {!isMob ? (
-              <Image
-                noWebp={true}
+              <img
+                data-aos={'fade-up'} data-aos-delay={'50'}
                 className={clsx("w-full h-full object-cover")}
-                animationClass={clsx("w-full h-full object-cover")}
                 src={imgTemplate.replace('{**}', 1)} alt="accom-img"/>
             ) : (
-              <Image
-                noWebp={true}
+              <img
+                data-aos={'fade-up'} data-aos-delay={'150'}
                 className={clsx("w-full h-full object-cover")}
-                animationClass={clsx("w-full h-full object-cover")}
                 src={imgTemplate.replace('{**}', 5)} alt="accom-img"/>
             )}
 
           </div>
           {!isMob && (
             <div>
-              <Image
-                noWebp={true}
+              <img
+                data-aos={'fade-up'} data-aos-delay={'150'}
                 className={clsx("w-full h-full object-cover")}
-                animationClass={clsx("w-full h-full object-cover")}
                 src={imgTemplate.replace('{**}', 2)} alt="accom-img"/>
             </div>
           )}
           {!isMob && (
             <div className={"flex flex-col gap-[20px]"}>
-              <Image
-                noWebp={true}
+              <img
+                data-aos={'fade-up'} data-aos-delay={'150'}
                 className={clsx("w-full h-full object-cover")}
-                animationClass={clsx("w-full h-full object-cover")} src={imgTemplate.replace('{**}', 3)} alt="accom-img"/>
-              <Image
-                noWebp={true}
+                 src={imgTemplate.replace('{**}', 3)} alt="accom-img"/>
+              <img
+                data-aos={'fade-up'} data-aos-delay={'150'}
                 className={clsx("w-full h-full object-cover")}
-                animationClass={clsx("w-full h-full object-cover")}
                 src={imgTemplate.replace('{**}', 4)} alt="accom-img"/>
             </div>
           )}

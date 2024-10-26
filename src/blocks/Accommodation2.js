@@ -19,12 +19,12 @@ function Accommodation2(props) {
     <div className={"bg-gold lg:pt-[90px] pb-[25px] pt-[50px] text-black"}>
       <div className="container">
         <div className={"flex md:flex-row flex-col justify-between gap-[35px] md:items-end"}>
-          <Animation>
+          <div data-aos={'fade-up'} data-aos-delay={'0'}>
             <div className={'text-[50px] leading-tight font2 '}>Room <br className={"md:hidden"}/> Categories </div>
-          </Animation>
-          <Animation>
+          </div>
+          <div data-aos={'fade-up'} data-aos-delay={'150'}>
             <div className={"md:text-[24px] text-[20px] pb-[4px] uppercase"}>{currentTitle}</div>
-          </Animation>
+          </div>
         </div>
         <Swiper
           modules={[Autoplay]}
