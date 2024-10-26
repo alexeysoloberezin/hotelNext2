@@ -9,7 +9,6 @@ import Spa from "../blocks/Spa";
 import Contacts from "../blocks/Contacts";
 import Animation from '../components/Animation';
 import Facilities from "../blocks/Facilities";
-import Head from "next/head";
 
 // const useHash = () => {
 //   const location = useLocation();
