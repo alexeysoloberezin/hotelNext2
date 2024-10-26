@@ -1,5 +1,3 @@
-"use client";
-
 import Script from 'next/script';
 import Head from 'next/head';
 import React from 'react';
@@ -7,6 +5,8 @@ import React from 'react';
 const SkipperWidget = ({ onInitSkipper }) => {
   // Функция инициализации, вызывается после загрузки скрипта
   const handleSkipperLoad = () => {
+    console.log('window.initSkipper', window.initSkipper)
+
     if (window.initSkipper) {
       window.initSkipper({
         hotelId: "IRIS_HOTEL_BROOKLINE",
@@ -68,6 +68,9 @@ const SkipperWidget = ({ onInitSkipper }) => {
         strategy="afterInteractive" // Загружает скрипт после первичного рендера
         onLoad={handleSkipperLoad} // Инициализируем виджет после загрузки скрипта
       />
+      <Script>
+
+      </Script>
 
       <div id="skipper-target"></div>
     </>
