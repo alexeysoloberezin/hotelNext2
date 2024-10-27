@@ -1,25 +1,16 @@
-'use client'
-
 import "./globals.css";
 import "./styles/index.scss"
 import 'swiper/css';
 import Footer from "@/components/core/Footer";
-import {useEffect} from "react";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BookingProvider from "@/context/BookingProvider/BookingProvider";
 import Loader from "@/components/core/Loader";
 import LoadChatScript from "@/components/core/LoadChatScript";
 import Script from "next/script";
 import Head from "next/head";
+import Aos from "@/components/Aos";
 
 export default function RootLayout({children}) {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Установить длительность анимации
-      once: true, // Запускать анимацию только один раз
-    });
-  }, []);
 
   return (
     <html lang="en">
@@ -84,6 +75,7 @@ export default function RootLayout({children}) {
       {children}
       <Footer/>
       {/*<Loader/>*/}
+      <Aos />
       <LoadChatScript />
     </BookingProvider>
     </body>
