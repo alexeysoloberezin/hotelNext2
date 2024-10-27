@@ -45,9 +45,10 @@ export default function RootLayout({children}) {
     <Script
       src="https://widget.skipperhospitality.com/cash-sdk.umd.js"
       strategy="afterInteractive"
+      id={'skipper-init-script'}
       type="module"
       onLoad={() => {
-        console.log('window.initSkipper', window.initSkipper)
+        console.log('window.initSkipper', window.initSkipper, window)
         if (window.initSkipper) {
           window.initSkipper({
             hotelId: "IRIS_HOTEL_BROOKLINE",
