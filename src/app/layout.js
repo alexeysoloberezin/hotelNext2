@@ -10,6 +10,8 @@ import 'aos/dist/aos.css';
 import BookingProvider from "@/context/BookingProvider/BookingProvider";
 import Loader from "@/components/core/Loader";
 import LoadChatScript from "@/components/core/LoadChatScript";
+import Script from "next/script";
+import Head from "next/head";
 
 export default function RootLayout({children}) {
   useEffect(() => {
@@ -21,6 +23,60 @@ export default function RootLayout({children}) {
 
   return (
     <html lang="en">
+    <Head>
+      <link
+        rel="preload"
+        href="https://widget.skipperhospitality.com/style.css"
+        as="style"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        href="https://widget.skipperhospitality.com/site-base.css"
+        as="style"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preconnect"
+        href="https://cash-api.skipperhospitality.com"
+      />
+    </Head>
+
+    <Script
+      src="https://widget.skipperhospitality.com/cash-sdk.umd.js"
+      strategy="afterInteractive"
+      type="module"
+      onLoad={() => {
+        console.log('window.initSkipper', window.initSkipper)
+        if (window.initSkipper) {
+          window.initSkipper({
+            hotelId: "IRIS_HOTEL_BROOKLINE",
+            target: "skipper-target",
+            isDynamic: true,
+            targetIds: ["placeholder-id"],
+            targetClasses: ["placeholder-class"],
+            fallbackUrl: "",
+            style: {
+              primaryFont: { family: "questrial, sans-serif", transform: "uppercase" },
+              secondaryFont: "questrial, sans-serif",
+              primaryColor: "#644FF5",
+              accentColor: "#CCBFB3",
+              primaryFontColor: "#211A52",
+              accentFontColor: "#fff",
+              placeholderFontColor: "#fff",
+              secondaryFontColor: "#5C4A53",
+              primaryBackgroundColor: "#fff",
+              primaryBorderColor: "#433E6B",
+              secondaryBackgroundColor: "#fff",
+              inactiveOpacity: 0.5,
+              disabledOpacity: 0.3,
+              highlightOpacity: 0.1,
+              stateOpacity: 0.4
+            }
+          });
+        }
+      }}
+    />
     <body
       className={`antialiased`}
     >

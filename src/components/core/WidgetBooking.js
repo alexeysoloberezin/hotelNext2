@@ -57,24 +57,24 @@ const SkipperWidget = ({ onInitSkipper }) => {
 
   return (
     <>
-      <Head>
-        <link
-          rel="preload"
-          href="https://widget.skipperhospitality.com/style.css"
-          as="style"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="https://widget.skipperhospitality.com/site-base.css"
-          as="style"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preconnect"
-          href="https://cash-api.skipperhospitality.com"
-        />
-      </Head>
+      {/*<Head>*/}
+      {/*  <link*/}
+      {/*    rel="preload"*/}
+      {/*    href="https://widget.skipperhospitality.com/style.css"*/}
+      {/*    as="style"*/}
+      {/*    crossOrigin="anonymous"*/}
+      {/*  />*/}
+      {/*  <link*/}
+      {/*    rel="preload"*/}
+      {/*    href="https://widget.skipperhospitality.com/site-base.css"*/}
+      {/*    as="style"*/}
+      {/*    crossOrigin="anonymous"*/}
+      {/*  />*/}
+      {/*  <link*/}
+      {/*    rel="preconnect"*/}
+      {/*    href="https://cash-api.skipperhospitality.com"*/}
+      {/*  />*/}
+      {/*</Head>*/}
 
       <div id="skipper-target"></div>
     </>
