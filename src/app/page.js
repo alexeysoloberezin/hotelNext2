@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <div className={clsx(' relative  flex flex-col homePage')}>
-      <MainBlock />
+      {/*<MainBlock />*/}
 
       <div style={{minHeight: '80vh'}}>
         <Accommodation/>

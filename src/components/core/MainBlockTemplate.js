@@ -3,12 +3,9 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Header from "./Header";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import Animation from '../Animation';
-
 
 function MainBlockTemplate({video, videoWebM, preview, image, mobileGif, title, description, children}) {
   const isMobile = useMediaQuery(false, '(max-width: 600px)');
-
 
   return (
     <div>
