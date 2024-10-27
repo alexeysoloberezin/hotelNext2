@@ -10,7 +10,9 @@ import ImageChanger from "@/components/ui/ImageChanger";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Animation from "@/components/Animation";
 
-function EventCard({title, color, children, classes, titleClass}) {
+function EventCard(props) {
+  const {title, color, children, classes, titleClass} = props || {}
+
   const colors = {
     'white': 'text-black bg-white',
     'gold': 'text-black bg-gold',
@@ -25,7 +27,7 @@ function EventCard({title, color, children, classes, titleClass}) {
   )
 }
 
-function EventsPage(props) {
+function EventsPage() {
   const isTable = useMediaQuery(false, '(max-width: 1340px)')
 
   return (

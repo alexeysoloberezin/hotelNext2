@@ -22,7 +22,7 @@ export const metadata = {
   },
 };
 
-function AboutUs(props) {
+function AboutUs() {
   return (
     <>
       <MainBlockTemplate

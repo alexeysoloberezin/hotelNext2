@@ -9,7 +9,7 @@ import Button from "@/components/ui/Button";
 import SwiperImages from "@/blocks/SwiperImages";
 import Animation from '@/components/Animation';
 
-function Restaurant() {
+function RestaurantClient() {
   const els = [1, 2, 3]
   return (
     <div>
@@ -23,14 +23,14 @@ function Restaurant() {
       <div className={"bg-gold text-black lg:py-[100px] py-[50px]"}>
         <div className="container text-center">
           <Animation>
-          <h2 className={" mx-auto"}>
-            Petal Restaurant is more than just a dining experience; it's a journey of taste and artistry
-          </h2>
+            <h2 className={" mx-auto"}>
+              Petal Restaurant is more than just a dining experience; it's a journey of taste and artistry
+            </h2>
           </Animation>
 
-           <Animation>
+          <Animation>
             <SwiperImages countEls={4} imgTemplate={'/res{**}.jpg'}/>
-           </Animation>
+          </Animation>
 
           <div className={"flex justify-center"}>
             <a href="https://www.opentable.com/restref/client/?restref=1344616&lang=en-US&ot_source=Restaurant%20website&corrid=3a42341d-55a0-458f-805a-b07032179a17">
@@ -51,7 +51,7 @@ function Restaurant() {
           </h2>
         </Animation>
         <Animation>
-        <p data-aos="fade-up" data-aos-delay="400" className={"max-w-[578px] mt-[20px]"}>Our commitment to healthful
+          <p data-aos="fade-up" data-aos-delay="400" className={"max-w-[578px] mt-[20px]"}>Our commitment to healthful
             cuisine and the unparalleled beauty of Giovanni De Cunto's masterpiece combine to create a dining experience
             that is as enriching as it is indulgent. </p>
         </Animation>
@@ -61,4 +61,4 @@ function Restaurant() {
   );
 }
 
-export default Restaurant;
+export default RestaurantClient;

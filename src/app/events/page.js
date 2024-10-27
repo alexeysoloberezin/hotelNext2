@@ -1,7 +1,7 @@
-import PageClient from "@/app/events/pageClient";
+import EventClient from "@/app/pgs/eventClient";
 
 export default function Page() {
   return (
-    <PageClient />
+    <EventClient />
   )
 }

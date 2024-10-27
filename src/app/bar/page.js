@@ -17,7 +17,7 @@ export const metadata = {
   },
 };
 
-function Bar(props) {
+function Bar() {
   return (
     <div>
       <MainBlockTemplate
