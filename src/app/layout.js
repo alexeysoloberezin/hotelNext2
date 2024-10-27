@@ -49,10 +49,10 @@ export default function RootLayout({children}) {
       type="module"
       onLoad={() => {
         console.log('window.initSkipper', window.initSkipper, window, window._initSkipper)
-        window.restartSkipperWidget()
+        // window.restartSkipperWidget()
 
-        if (window.initSkipper) {
-          window.initSkipper({
+        if (window._initSkipper) {
+          window._initSkipper({
             hotelId: "IRIS_HOTEL_BROOKLINE",
             target: "skipper-target",
             isDynamic: true,
