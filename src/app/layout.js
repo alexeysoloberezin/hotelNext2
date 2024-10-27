@@ -48,7 +48,9 @@ export default function RootLayout({children}) {
       id={'skipper-init-script'}
       type="module"
       onLoad={() => {
-        console.log('window.initSkipper', window.initSkipper, window)
+        console.log('window.initSkipper', window.initSkipper, window, window._initSkipper)
+        window.restartSkipperWidget()
+
         if (window.initSkipper) {
           window.initSkipper({
             hotelId: "IRIS_HOTEL_BROOKLINE",
