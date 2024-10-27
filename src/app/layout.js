@@ -14,12 +14,12 @@ import Script from "next/script";
 import Head from "next/head";
 
 export default function RootLayout({children}) {
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000, // Установить длительность анимации
-  //     once: true, // Запускать анимацию только один раз
-  //   });
-  // }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Установить длительность анимации
+      once: true, // Запускать анимацию только один раз
+    });
+  }, []);
 
   return (
     <html lang="en">
