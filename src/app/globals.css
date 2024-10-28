@@ -1,0 +1,8 @@
+.fullImg_inside{
+    width: 100%;
+    height: 100%;
+}
+.fullImg_inside *{
+    width: 100%;
+    height: 100%;
+}

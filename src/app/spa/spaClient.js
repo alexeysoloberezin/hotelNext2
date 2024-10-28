@@ -52,7 +52,7 @@ function Page() {
         <GridEls
           title={'Our Service'}
           cols={2}
-          classes={'max-w-[900px] mx-auto'}
+          classes={'max-w-[900px]  mx-auto'}
           arr={[
             {
               title: 'Deep Tissue Massage',

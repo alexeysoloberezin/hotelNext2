@@ -10,7 +10,7 @@ function PerfectGrid({imgTemplate, hideMob}) {
 
   const indexClasses = [
     'order-1 md:order-1',
-    'order-3 md:order-2 row-span-2 col-span-2 md:col-span-1 md:max-h-fit md:h-[580px] md:max-h-[345px]',
+    'order-3 md:order-2 row-span-2 col-span-2 md:col-span-1 md:max-h-fit md:h-[598px] md:max-h-[345px]',
     'order-4 md:order-3',
     'order-2 md:order-4',
     'order-5 md:order-5',
@@ -18,7 +18,7 @@ function PerfectGrid({imgTemplate, hideMob}) {
 
   const h = [
     'md:h-[195px] lg:h-[330px] h-full w-full',
-    'md:h-[406px] lg:h-[683px] sm:h-full h-[330px] w-full ',
+    'md:h-[406px] lg:h-[588px] sm:h-full h-[330px] w-full ',
     'md:h-[195px] lg:h-[330px] h-full w-full',
     'md:h-[195px] lg:h-[330px] h-full w-full',
     'md:h-[195px] lg:h-[330px] h-full w-full',
@@ -34,7 +34,7 @@ function PerfectGrid({imgTemplate, hideMob}) {
         <div
           data-aos={'fade-up'} data-aos-delay={index * 150}
           key={index}
-             className={indexClasses[index]}>
+             className={clsx(indexClasses[index], 'h-full w-full')}>
             <Image
               noWebp={true}
               animationClass={clsx('', h[index])}

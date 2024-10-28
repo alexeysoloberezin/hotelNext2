@@ -20,7 +20,7 @@ function FacialItem({imgTemplate, title, price, time, text, index}) {
       delay={index * 0.1 + 's'}
     >
       <div className={"md:min-h-[420px] cursor-pointer min-h-[390px] p-[20px]  relative flex flex-col justify-center align-center"} onClick={() => setIsOpen(!isOpen)}>
-        <Image src={imgTemplate.replace('{**}', index)} className={"absolute top-0 left-0 w-full h-full object-cover"}/>
+        <img src={imgTemplate.replace('{**}', index)} className={"absolute top-0 left-0 w-full h-full object-cover"}/>
         <div className={"relative z-10 flex flex-col items-center justify-center"}>
           <div className={"flex items-end mb-[5px] font2"}>
             <span className={"text-[50px]"} style={{lineHeight: 1}}>{price} /</span>

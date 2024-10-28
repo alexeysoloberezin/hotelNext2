@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Image from "../components/ui/Image";
 import Animation from "../components/Animation";
 import useMediaQuery from "../hooks/useMediaQuery";
+import Zoom from "react-medium-image-zoom";
 
 function ZBlock({title, text1, imgTemplate}) {
   const isMob = useMediaQuery(false, '(max-width: 660px)')
@@ -24,36 +25,46 @@ function ZBlock({title, text1, imgTemplate}) {
               </div>
             </div>
             {!isMob ? (
-              <img
-                data-aos={'fade-up'} data-aos-delay={'50'}
-                className={clsx("w-full h-full object-cover")}
-                src={imgTemplate.replace('{**}', 1)} alt="accom-img"/>
+              <Zoom>
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'50'}
+                  className={clsx("w-full h-full object-cover")}
+                  src={imgTemplate.replace('{**}', 1)} alt="accom-img"/>
+              </Zoom>
             ) : (
-              <img
-                data-aos={'fade-up'} data-aos-delay={'150'}
-                className={clsx("w-full h-full object-cover")}
-                src={imgTemplate.replace('{**}', 5)} alt="accom-img"/>
+              <Zoom>
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'150'}
+                  className={clsx("w-full h-full object-cover")}
+                  src={imgTemplate.replace('{**}', 5)} alt="accom-img"/>
+              </Zoom>
             )}
 
           </div>
           {!isMob && (
             <div>
-              <img
-                data-aos={'fade-up'} data-aos-delay={'150'}
-                className={clsx("w-full h-full object-cover")}
-                src={imgTemplate.replace('{**}', 2)} alt="accom-img"/>
+              <Zoom>
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'150'}
+                  className={clsx("w-full h-full object-cover")}
+                  src={imgTemplate.replace('{**}', 2)} alt="accom-img"/>
+              </Zoom>
             </div>
           )}
           {!isMob && (
             <div className={"flex flex-col gap-[20px]"}>
-              <img
-                data-aos={'fade-up'} data-aos-delay={'150'}
-                className={clsx("w-full h-full object-cover")}
-                 src={imgTemplate.replace('{**}', 3)} alt="accom-img"/>
-              <img
-                data-aos={'fade-up'} data-aos-delay={'150'}
-                className={clsx("w-full h-full object-cover")}
-                src={imgTemplate.replace('{**}', 4)} alt="accom-img"/>
+              <Zoom>
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'150'}
+                  className={clsx("w-full h-full object-cover")}
+                  src={imgTemplate.replace('{**}', 3)} alt="accom-img"/>
+              </Zoom>
+              <Zoom>
+                <img
+                  data-aos={'fade-up'} data-aos-delay={'150'}
+                  className={clsx("w-full h-full object-cover")}
+                  src={imgTemplate.replace('{**}', 4)} alt="accom-img"/>
+              </Zoom>
             </div>
           )}
         </div>

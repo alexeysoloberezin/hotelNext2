@@ -23,8 +23,10 @@ function GridBlockAboutUs({data, imgTemplate, type = 'type1', hideMob}) {
     })}>
       <div className={"flex flex-col gap-[20px]"}>
         <div data-aos={'fade-up'} data-aos-delay={'0'}>
-          <img className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 1)}
-               alt=""/>
+          <Zoom>
+            <img className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 1)}
+                 alt=""/>
+          </Zoom>
           {data[0] && <h4 className={clsx(textClass)}>{data[0]}</h4>}
         </div>
         <div data-aos={'fade-up'} data-aos-delay={'150'}>
@@ -37,9 +39,10 @@ function GridBlockAboutUs({data, imgTemplate, type = 'type1', hideMob}) {
       </div>
       <div data-aos={'fade-up'} data-aos-delay={'300'}
            className={"flex flex-col gap-[20px]"} >
-          <img className={clsx(classes[type]['3'], "w-full object-cover")} src={imgTemplate.replace('{**}', 3)}
-               alt=""/>
-          {data[2] && <h4 className={clsx(textClass)}>{data[2]}</h4>}
+        <Zoom> <img className={clsx(classes[type]['3'], "w-full object-cover")} src={imgTemplate.replace('{**}', 3)}
+                    alt=""/></Zoom>
+
+        {data[2] && <h4 className={clsx(textClass)}>{data[2]}</h4>}
       </div>
       <div className={"flex flex-col gap-[20px]"}>
         <div data-aos={'fade-up'} data-aos-delay={'350'}>

@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./styles/index.scss"
 import 'swiper/css';
+import 'react-medium-image-zoom/dist/styles.css'
 import Footer from "@/components/core/Footer";
 import LoadChatScript from "@/components/core/LoadChatScript";
 import Aos from "@/components/Aos";

@@ -8,6 +8,7 @@ import Animation from "../components/Animation";
 import useMediaQuery from "../hooks/useMediaQuery";
 import {Autoplay} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
+import Zoom from "react-medium-image-zoom";
 
 function ZBlock({title, text1, text2, imgTemplate, children}) {
   const isMob = useMediaQuery(false, '(max-width: 660px)')
@@ -27,18 +28,22 @@ function ZBlock({title, text1, text2, imgTemplate, children}) {
               </div>
             </div>
             {!isMob &&
-              <img
+              <Zoom><img
                 data-aos={'fade-up'} data-aos-delay={'0'}
                 className={clsx("w-full h-full object-cover",
-                )} src={imgTemplate.replace('{**}', 1)} alt="accom-img"/>
+                )} src={imgTemplate.replace('{**}', 1)} alt="accom-img"/></Zoom>
+
+
             }
           </div>
           <div>
             {!isMob &&
-              <img
+              <Zoom><img
                 data-aos={'fade-up'} data-aos-delay={'0'}
                 className={clsx("w-full h-full object-cover")}
-                src={imgTemplate.replace('{**}', 2)} alt="accom-img"/>
+                src={imgTemplate.replace('{**}', 2)} alt="accom-img"/></Zoom>
+
+
             }
             {isMob && (
               <Swiper
@@ -75,10 +80,12 @@ function ZBlock({title, text1, text2, imgTemplate, children}) {
           </div>
           <div className={"lg:flex flex-col"}>
             {!isMob &&
-              <img
+              <Zoom><img
                 data-aos={'fade-up'} data-aos-delay={'0'}
                 className={clsx("w-full h-full object-cover",
-                )} src={imgTemplate.replace('{**}', 3)} alt="accom-img"/>
+                )} src={imgTemplate.replace('{**}', 3)} alt="accom-img"/></Zoom>
+
+
             }
             {text2 && (
               <div className={'grow flex  py-[20px]'}>

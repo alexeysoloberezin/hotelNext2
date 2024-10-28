@@ -2,6 +2,7 @@
 
 import React, {useState, useEffect, useRef} from 'react';
 import Animation from '../Animation';
+import Zoom from "react-medium-image-zoom";
 
 // Функция для замены расширения файла на .webp
 const getWebpSrc = (src) => {
@@ -22,13 +23,13 @@ const Image = ({
 
 
   return (
-    <img
+    <Zoom> <img
       className={className}
       data-aos={dataAos}
       data-aos-delay={delay}
       src={src}
       alt={alt}
-    />
+    /></Zoom>
   );
 };
 
