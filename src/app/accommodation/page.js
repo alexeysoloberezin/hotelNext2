@@ -17,8 +17,6 @@ export const metadata = {
     title: "Accommodation | IRIS HOTEL Boston – Luxury Apartments & Suites",
     description:
       "Explore our premium accommodations at IRIS HOTEL Boston, featuring 119 luxurious apartments and suites with modern amenities and elevator access, perfect for both leisure and business stays.",
-    url: "https://your-hotel-site.com/accommodation",
-    type: "website",
   },
 };
 

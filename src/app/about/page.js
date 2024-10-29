@@ -17,8 +17,6 @@ export const metadata = {
     title: "About Us | IRIS HOTEL Boston – Luxury Hotel in the Heart of Boston",
     description:
       "Discover IRIS HOTEL Boston, offering modern luxury with 119 apartments, elevators, a top-tier restaurant, a spa, and more. Experience comfort and elegance at the heart of Boston.",
-    url: "https://your-hotel-site.com/about",
-    type: "website",
   },
 };
 

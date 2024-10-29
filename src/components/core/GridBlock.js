@@ -18,32 +18,34 @@ function GridBlock({data, imgTemplate, type = 'type1', hideMob}) {
 
   return (
     <div className={clsx('text-black md:grid-cols-[29%_1fr_29%] gap-[20px]', {
-      'md:grid hidden' :hideMob,
+      'md:grid hidden': hideMob,
       'grid': !hideMob
     })}>
       <div className={"flex flex-col gap-[20px]"}>
-        <div data-aos={'fade-up'} data-aos-delay={'0'}  >
-          <Image className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 1)} alt=""/>
+        <div data-aos={'fade-up'} data-aos-delay={'0'} className={"fullImg_inside"}>
+          <Image className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 1)}
+                 alt=""/>
           {data[0] && <h4 className={clsx(textClass)}>{data[0]}</h4>}
         </div>
-        <div data-aos={'fade-up'} data-aos-delay={'150'}>
-          <Image className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 2)} alt=""/>
+        <div data-aos={'fade-up'} data-aos-delay={'150'} className={"fullImg_inside"}>
+          <Image className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 2)}
+                 alt=""/>
           {data[1] && <h4 className={clsx(textClass)}>{data[1]}</h4>}
         </div>
       </div>
-      <div data-aos={'fade-up'} data-aos-delay={'300'} className={"flex flex-col gap-[20px]"}  delay={'.4s'}>
-        <div>
-          <Image className={clsx(classes[type]['3'], "w-full object-cover")} src={imgTemplate.replace('{**}', 3)} alt=""/>
-          {data[2] && <h4 className={clsx(textClass)}>{data[2]}</h4>}
-        </div>
+      <div data-aos={'fade-up'} data-aos-delay={'300'} className={"flex flex-col gap-[20px] fullImg_inside"}>
+        <Image className={clsx(classes[type]['3'], "w-full object-cover")} src={imgTemplate.replace('{**}', 3)} alt=""/>
+        {data[2] && <h4 className={clsx(textClass)}>{data[2]}</h4>}
       </div>
       <div className={"flex flex-col gap-[20px]"}>
-        <div data-aos={'fade-up'} data-aos-delay={'450'}>
-          <Image className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 4)} alt=""/>
+        <div data-aos={'fade-up'} data-aos-delay={'450'} className={"fullImg_inside"}>
+          <Image className={clsx(classes[type]['2'], "w-full object-cover")} src={imgTemplate.replace('{**}', 4)}
+                 alt=""/>
           {data[3] && <h4 className={clsx(textClass)}>{data[3]}</h4>}
         </div>
-        <div data-aos={'fade-up'} data-aos-delay={'600'}>
-          <Image className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 5)} alt=""/>
+        <div data-aos={'fade-up'} data-aos-delay={'600'} className={"fullImg_inside"}>
+          <Image className={clsx(classes[type]['1'], "w-full object-cover")} src={imgTemplate.replace('{**}', 5)}
+                 alt=""/>
           {data[4] && <h4 className={clsx(textClass)}>{data[4]}</h4>}
         </div>
       </div>

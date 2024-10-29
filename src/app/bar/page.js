@@ -12,8 +12,6 @@ export const metadata = {
     title: "Nectar Bar | IRIS HOTEL Boston – Cocktails, Coffee & More",
     description:
       "Unwind at Nectar Bar in IRIS HOTEL Boston, featuring an array of crafted cocktails, premium coffee, and teas. A perfect spot for socializing and relaxation.",
-    url: "https://your-hotel-site.com/nectar-bar",
-    type: "website",
   },
 };
 
