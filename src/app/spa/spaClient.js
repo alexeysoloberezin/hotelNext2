@@ -16,7 +16,7 @@ function Page() {
   return (
     <div>
       <MainBlockTemplate
-        title={'Spa Room'}
+        title={'Iris Spa Room'}
         video={'/spa.mp4'}
         videoWebM={'/spa.webm'}
         mobileGif={'/spa.gif'}
