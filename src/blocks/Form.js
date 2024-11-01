@@ -12,6 +12,7 @@ const Form = (props) => {
   const defaultData = {
     name: '',
     phone: '',
+    email: '',
     note: ''
   };
 
@@ -29,6 +30,7 @@ const Form = (props) => {
   const formSchema = z.object({
     name: z.string().nonempty('Name is required').regex(/^[a-zA-Zа-яА-Я\s]+$/, 'Invalid Name'),
     phone: z.string(),
+    email: z.string().nonempty('Email is required'),
     note: z.string(),
   });
 
@@ -90,7 +92,7 @@ const Form = (props) => {
     };
 
     try {
-      const message = `Name: ${form.name}\nNote: ${form.note}\nPhone: ${form.phone}\n`;
+      const message = `Name: ${form.name}\nNote: ${form.note}\nPhone: ${form.phone}\nEmail: ${form.email}`;
       const res = await fetch(`/api/send-email`, {
         method: 'POST',
         headers: {
@@ -134,6 +136,13 @@ const Form = (props) => {
               onChange={handleInputChange}
               name={'phone'}
               error={errors.phone}
+            />
+            <Input
+              placeholder={'Email'}
+              value={form.email}
+              onChange={handleInputChange}
+              name={'email'}
+              error={errors.email}
             />
             <Input
               placeholder={'Add a note'}
