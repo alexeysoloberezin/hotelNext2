@@ -9,7 +9,7 @@ function ImageChanger({length = 3, imgTemplate, classes, slideClass, swiperClass
   return (
     <Swiper
       modules={[Autoplay, EffectFade]}
-      className={clsx("!mb-[0px] md:!overflow-hidden !overflow-visible", swiperClass)}
+      className={clsx("!mb-[0px] md:!overflow-hidden !overflow-visible h-full", swiperClass)}
       loop={true}
       effect={'fade'}
       autoplaySpeed={400}

@@ -14,12 +14,14 @@ export default function RootLayout({children}) {
     <body
       className={`antialiased`}
     >
-    {children}
-    <Footer/>
-    {/*<Loader/>*/}
-    <Aos/>
-    <LoadChatScript/>
-    <WidgetBooking/>
+     <div className="app" id={'app'}>
+       {children}
+       <Footer/>
+       {/*<Loader/>*/}
+       <Aos/>
+       <LoadChatScript/>
+       <WidgetBooking/>
+     </div>
     </body>
     </html>
   );

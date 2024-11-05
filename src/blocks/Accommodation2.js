@@ -5,7 +5,6 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay} from "swiper/modules";
 import Image from "../components/ui/Image";
 import {accommodationDataBig} from "../data/accod";
-import Animation from "../components/Animation";
 
 function Accommodation2(props) {
   const accommodations = accommodationDataBig('roomBig');

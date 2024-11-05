@@ -11,7 +11,7 @@ function EventsPackaj(props) {
   const arr = [1, 1, 1, 1, 1, 1]
   const imgTemplate = '/ev/ev{**}.jpg'
   return (
-    <div className={"bg-[#0E4840] lg:py-[200px]  py-[100px]"}>
+    <div className={"bg-[#5747A6] lg:py-[200px]  py-[100px]"}>
       <div className="container">
         <div className={"lg:grid lg:grid-cols-[1fr_750px] gap-[30px]"}>
           <div className={""}>

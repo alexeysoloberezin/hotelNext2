@@ -14,14 +14,14 @@ function EventCard(props) {
   const {title, color, children, classes, titleClass} = props || {}
 
   const colors = {
-    'white': 'text-black bg-white',
-    'gold': 'text-black bg-gold',
+    'white': 'text-black bg-[#FAF5FF]',
+    'gold': 'text-black bg-[#ABA3D2]',
   }
 
   return (
-    <div className={clsx(colors[color], 'sm:p-[20px] p-[16px]', classes)}>
+    <div className={clsx(colors[color], 'sm:p-[20px]  flex flex-col justify-center items-center text-center p-[16px] xl:rounded-full', classes, !classes ? 'xl:w-[200px] xl:h-[200px]' : '')}>
       <div className={clsx(titleClass, 'md:text-[25px] text-[20px] sm:mb-[10px] mb-[7px] font-medium')}
-           style={{lineHeight: 1.15}}>{title}</div>
+           style={{lineHeight: 1.25}}>{title}</div>
       <div>{children}</div>
     </div>
   )
@@ -40,7 +40,7 @@ function EventsPage() {
       >
       </MainBlockTemplate>
 
-      <div className={'lg:bg-dark bg-[#0E4840] lg:py-[200px] py-[90px]'}>
+      <div className={'lg:bg-dark bg-[#5747A6] lg:py-[200px] py-[90px]'}>
         <div className={'container '}>
           <div className={'flex justify-between'}>
             <div className={"lg:block hidden"}>
@@ -86,7 +86,7 @@ function EventsPage() {
         </div>
       </div>
 
-      <div className={'bg-gold lg:py-[190px] py-[90px]'}>
+      <div className={'bg-[#ABA3D2] lg:py-[190px] py-[90px]'}>
         <div className="container">
           <div className={clsx('grid gap-[20px]', !isTable ? 'grid-cols-2' : '')}>
             <div>
@@ -119,7 +119,7 @@ function EventsPage() {
                   </EventCard>
                 </div>
                 <div>
-                  <div className={'p-[20px] bg-white text-black h-full flex sm:block gap-[20px]'}>
+                  <div className={'p-[20px] bg-[#FAF5FF] text-black h-full flex xl:flex-col xl:justify-center xl:items-center  gap-[20px] xl:rounded-full'}>
                     <div>
                       <div className={'md:text-[25px] text-[20px] sm:mb-[10px] mb-[4px] font-medium'}
                            style={{lineHeight: 1.1}}>Venue Rental:
@@ -154,7 +154,7 @@ function EventsPage() {
         </div>
       </div>
 
-      <div className={'bg-white lg:py-[200px] py-[90px]'}>
+      <div className={'bg-[#FAF5FF] lg:py-[200px] py-[90px]'}>
         <div className="container">
           <div className={clsx('gap-[20px]', !isTable ? 'grid-cols-2 grid' : 'flex flex-col-reverse')}>
             <div>
@@ -178,7 +178,7 @@ function EventsPage() {
                     <p className={'md:text-[18px] text-[14px] font-medium leading-tight'}>Available at an additional
                       charge</p>
                   </EventCard>
-                  <EventCard color={'gold'} title={'Custom Menu:'} classes={'col-span-2 lg:max-w-[314px]'}>
+                  <EventCard color={'gold'} title={'Custom Menu:'} classes={'col-span-2 '}>
                     {/*<p className={'md:text-[16px] text-[14px] font-medium opacity-70 mt-[10px] mb-[9px]'}>(12:00 PM - 3:00 PM)</p>*/}
                     <p className={'md:text-[18px] text-[14px] font-medium leading-tight'}>Tailored to your preferences,
                       with final

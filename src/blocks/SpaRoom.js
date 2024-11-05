@@ -1,6 +1,7 @@
 import React from 'react';
-import SectionHeader from "../components/ui/SectionHeader";
-import PerfectGrid from "../components/core/PerfectGrid";
+import Image from "@/components/ui/Image";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay} from "swiper/modules";
 
 function SpaRoomEl({number, children, delay}) {
   return (
@@ -13,27 +14,56 @@ function SpaRoomEl({number, children, delay}) {
   )
 }
 
-function SpaRoom(props) {
+function SpaRoom() {
   return (
-    <div className={"bg-dark lg:py-[100px] py-[50px]"}>
-      {/*<div className={"grid lg:grid-cols-4 md:grid-cols-2 md:gap-[20px] gap-[50px] container pb-[150px]"}>*/}
-      {/*  <SpaRoomEl delay={'150'} number={'4'} >Years <br/>of Experience </SpaRoomEl>*/}
-      {/*  <SpaRoomEl delay={'350'} number={'20'} >Team <br/>Members</SpaRoomEl>*/}
-      {/*  <SpaRoomEl delay={'500'} number={'80'} >Our <br/>Products</SpaRoomEl>*/}
-      {/*  <SpaRoomEl delay={'650'} number={'2'} >Numbers <br/>of Salons</SpaRoomEl>*/}
-      {/*</div>*/}
+    <div className={"bg-dark lg:py-[100px] py-[65px]"}>
       <div className={"container"}>
-        <SectionHeader
-          text={'A cozy and relaxing space specially designed for maximum rest and rejuvenation. Music plays softly in the background, filling the space with the sounds of nature or soothing melodies that help release tension and immerse'}
-          color={'white'}
-          classText={"max-w-[640px] mx-auto text-center"}
-          title={'Spa Room'}
-          wrapperClassName={"justify-center"}
-          isCenter={true}
-        />
-        <PerfectGrid
-          imgTemplate={'/spaRoom_{**}.png'}
-        />
+        <div className={"flex md:flex-row flex-col justify-between lg:mb-[80px] mb-[35px] lg:text-left text-center gap-[35px] md:items-end"}>
+          <div className={"min-w-[340px]"} data-aos={'fade-up'} data-aos-delay={'0'}>
+            <div className={'text-[50px] leading-tight font2 '}>
+              Iris Spa Room
+            </div>
+          </div>
+          <div data-aos={'fade-up'} data-aos-delay={'150'} className={"max-w-[820px]"}>
+            <div className={"md:text-[18px]"}>
+              A cozy and relaxing space specially designed for maximum rest and rejuvenation. Music plays softly in the
+              background, filling the space with the sounds of nature or soothing melodies that help release tension and
+              immerse
+            </div>
+          </div>
+        </div>
+
+        <Swiper
+          modules={[Autoplay]}
+          className={"!mb-[20px] md:mt-[50px] mt-[15px]  md:!overflow-hidden !overflow-visible"}
+          loop={true}
+          autoplaySpeed={400}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          slidesPerView={1}
+          spaceBetween={20}
+          breakpoints={{
+            1024: {
+              slidesPerView: 1.4,
+              spaceBetween: 40
+            },
+          }}
+        >
+          {['/spaRoom_1.png', '/spaRoom_2.png'].map((item, index) => (
+            <SwiperSlide key={index} className={"lg:h-[530px] h-[235px]"}>
+              <div className="slide-content lg:h-[530px] h-[235px]">
+                <img
+                  alt={''}
+                  src={item}
+                  className={"w-full h-full object-cover"}
+                />
+              </div>
+            </SwiperSlide>
+          ))
+          }
+        </Swiper>
       </div>
     </div>
   );
