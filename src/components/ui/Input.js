@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-// import InputMask from "react-input-mask"
 import clsx from "clsx";
 
 function Input({placeholder,label, value, error, onChange, name, mask}) {

@@ -132,7 +132,6 @@ const Form = (props) => {
             <Input
               placeholder={'Phone'}
               value={form.phone}
-              mask={'+1 (999) 999-9999'}
               onChange={handleInputChange}
               name={'phone'}
               error={errors.phone}
