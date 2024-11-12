@@ -18,7 +18,8 @@ function SpaRoom() {
   return (
     <div className={"bg-dark lg:py-[100px] py-[65px]"}>
       <div className={"container"}>
-        <div className={"flex md:flex-row flex-col justify-between lg:mb-[80px] mb-[35px] lg:text-left text-center gap-[35px] md:items-end"}>
+        <div
+          className={"flex md:flex-row flex-col justify-between lg:mb-[80px] mb-[35px] lg:text-left text-center gap-[35px] md:items-end"}>
           <div className={"min-w-[340px]"} data-aos={'fade-up'} data-aos-delay={'0'}>
             <div className={'text-[50px] leading-tight font2 '}>
               Iris Spa Room
@@ -33,37 +34,55 @@ function SpaRoom() {
           </div>
         </div>
 
-        <Swiper
-          modules={[Autoplay]}
-          className={"!mb-[20px] md:mt-[50px] mt-[15px]  md:!overflow-hidden !overflow-visible"}
-          loop={true}
-          autoplaySpeed={400}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          slidesPerView={1}
-          spaceBetween={20}
-          breakpoints={{
-            1024: {
-              slidesPerView: 1.4,
-              spaceBetween: 40
-            },
-          }}
-        >
-          {['/spaRoom_1.png', '/spaRoom_2.png'].map((item, index) => (
-            <SwiperSlide key={index} className={"lg:h-[530px] h-[235px]"}>
-              <div className="slide-content lg:h-[530px] h-[235px]">
-                <img
-                  alt={''}
-                  src={item}
-                  className={"w-full h-full object-cover"}
-                />
-              </div>
-            </SwiperSlide>
-          ))
-          }
-        </Swiper>
+        <div className="lg:grid grid-cols-12 lg:h-[370px] gap-[20px] h-[235px]">
+          <img
+            alt={''}
+            src={'/img111.png'}
+            className={"w-full h-full object-cover col-span-6"}
+          />
+          <img
+            alt={''}
+            src={'/img113.png'}
+            className={"w-full lg:block hidden h-full object-cover col-span-3"}
+          />
+          <img
+            alt={''}
+            src={'/img114.png'}
+            className={"w-full lg:block hidden h-full object-cover col-span-3"}
+          />
+        </div>
+
+        {/*<Swiper*/}
+        {/*  modules={[Autoplay]}*/}
+        {/*  className={"!mb-[20px] md:mt-[50px] mt-[15px]  md:!overflow-hidden !overflow-visible"}*/}
+        {/*  loop={true}*/}
+        {/*  autoplaySpeed={400}*/}
+        {/*  autoplay={{*/}
+        {/*    delay: 2500,*/}
+        {/*    disableOnInteraction: false,*/}
+        {/*  }}*/}
+        {/*  slidesPerView={1}*/}
+        {/*  spaceBetween={20}*/}
+        {/*  breakpoints={{*/}
+        {/*    1024: {*/}
+        {/*      slidesPerView: 1.4,*/}
+        {/*      spaceBetween: 40*/}
+        {/*    },*/}
+        {/*  }}*/}
+        {/*>*/}
+        {/*  {['/spaRoom_1.png', '/spaRoom_2.png'].map((item, index) => (*/}
+        {/*    <SwiperSlide key={index} className={"lg:h-[530px] h-[235px]"}>*/}
+        {/*      <div className="slide-content lg:h-[530px] h-[235px]">*/}
+        {/*        <img*/}
+        {/*          alt={''}*/}
+        {/*          src={item}*/}
+        {/*          className={"w-full h-full object-cover"}*/}
+        {/*        />*/}
+        {/*      </div>*/}
+        {/*    </SwiperSlide>*/}
+        {/*  ))*/}
+        {/*  }*/}
+        {/*</Swiper>*/}
       </div>
     </div>
   );
