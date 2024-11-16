@@ -9,6 +9,7 @@ import EventsPackaj from "@/blocks/EventsPackaj";
 import ImageChanger from "@/components/ui/ImageChanger";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Animation from "@/components/Animation";
+import SelectDateSection from "@/components/SelectDateSection";
 
 function EventCard(props) {
   const {title, color, children, classes, titleClass} = props || {}
@@ -86,73 +87,73 @@ function EventsPage() {
         </div>
       </div>
 
-      <div className={'bg-[#ABA3D2] lg:py-[190px] py-[90px]'}>
-        <div className="container">
-          <div className={clsx('grid gap-[20px]', !isTable ? 'grid-cols-2' : '')}>
-            <div>
+      {/*<div className={'bg-[#ABA3D2] lg:py-[190px] py-[90px]'}>*/}
+      {/*  <div className="container">*/}
+      {/*    <div className={clsx('grid gap-[20px]', !isTable ? 'grid-cols-2' : '')}>*/}
+      {/*      <div>*/}
 
-              <Animation>
-                <h2 className={'text-black mb-[30px] bigMob'}>
-                  Event <br className={"md:hidden block"}/> Packages & <br
-                  className={"md:hidden block"}/> Pricing
-                </h2>
-              </Animation>
+      {/*        <Animation>*/}
+      {/*          <h2 className={'text-black mb-[30px] bigMob'}>*/}
+      {/*            Event <br className={"md:hidden block"}/> Packages & <br*/}
+      {/*            className={"md:hidden block"}/> Pricing*/}
+      {/*          </h2>*/}
+      {/*        </Animation>*/}
 
-              <div className={"grid md:grid-cols-[2fr_1fr] md:gap-[20px] gap-[12px]"}>
-                <div className={"grid grid-cols-2 md:gap-[20px] gap-[12px]"}>
-                  <EventCard color={'white'} title={'Capacity: '}>
-                    <p className={'md:text-[18px] text-[14px] font-medium '}>Up to 50 guests</p>
-                  </EventCard>
-                  <EventCard color={'white'} title={'Weekly Rates: '}>
-                    <p className={'md:text-[18px] text-[14px] font-medium '}>$5,000</p>
-                  </EventCard>
-                  <EventCard color={'white'} title={'Cost per Guest: '} titleClass={'max-w-[128px]'}>
-                    <p className={'md:text-[18px] text-[14px] font-medium '}>$150</p>
-                  </EventCard>
+      {/*        <div className={"grid md:grid-cols-[2fr_1fr] md:gap-[20px] gap-[12px]"}>*/}
+      {/*          <div className={"grid grid-cols-2 md:gap-[20px] gap-[12px]"}>*/}
+      {/*            <EventCard color={'white'} title={'Capacity: '}>*/}
+      {/*              <p className={'md:text-[18px] text-[14px] font-medium '}>Up to 50 guests</p>*/}
+      {/*            </EventCard>*/}
+      {/*            <EventCard color={'white'} title={'Weekly Rates: '}>*/}
+      {/*              <p className={'md:text-[18px] text-[14px] font-medium '}>$5,000</p>*/}
+      {/*            </EventCard>*/}
+      {/*            <EventCard color={'white'} title={'Cost per Guest: '} titleClass={'max-w-[128px]'}>*/}
+      {/*              <p className={'md:text-[18px] text-[14px] font-medium '}>$150</p>*/}
+      {/*            </EventCard>*/}
 
-                  <EventCard color={'white'} title={'Lunch Events:'}>
-                    <p
-                      className={'md:text-[16px] text-[13px] font-medium opacity-70 sm:mt-[10px] my-[4px] sm:mb-[9px]'}>(12:00
-                      PM -
-                      3:00 PM)</p>
-                    <p className={'md:text-[18px] text-[14px] font-medium '}>Minimum $3,000</p>
-                  </EventCard>
-                </div>
-                <div>
-                  <div className={'p-[20px] bg-[#FAF5FF] text-black h-full flex xl:flex-col xl:justify-center xl:items-center  gap-[20px] xl:rounded-full'}>
-                    <div>
-                      <div className={'md:text-[25px] text-[20px] sm:mb-[10px] mb-[4px] font-medium'}
-                           style={{lineHeight: 1.1}}>Venue Rental:
-                      </div>
-                      <p
-                        className={'md:text-[16px] text-[14px] font-medium opacity-70 sm:mt-[10px] mt-[3px] mb-[15px]'}>(Friday,
-                        Saturday,
-                        Sunday): </p>
-                    </div>
-                    <div className={"sm:w-fit w-[70%]"}>
-                      <p className={'md:text-[18px] text-[14px] font-medium  sm:mb-[15px] mb-[3px]'}>$6,000 for
-                        exclusive
-                        use </p>
-                      <p className={'md:text-[18px] text-[14px] font-medium '}>from 5:00 PM <br/>to 10:00 PM</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              {!isTable && (
-                <ImageChanger
-                  swiperClass={'h-[343px]'}
-                  slideClass={'h-full w-full'}
-                  swiperSlideClass={'h-full w-full'}
-                  imgTemplate={'/pric/pric{**}.jpg'}
-                  classes={'h-full w-full object-cover'}
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
+      {/*            <EventCard color={'white'} title={'Lunch Events:'}>*/}
+      {/*              <p*/}
+      {/*                className={'md:text-[16px] text-[13px] font-medium opacity-70 sm:mt-[10px] my-[4px] sm:mb-[9px]'}>(12:00*/}
+      {/*                PM -*/}
+      {/*                3:00 PM)</p>*/}
+      {/*              <p className={'md:text-[18px] text-[14px] font-medium '}>Minimum $3,000</p>*/}
+      {/*            </EventCard>*/}
+      {/*          </div>*/}
+      {/*          <div>*/}
+      {/*            <div className={'p-[20px] bg-[#FAF5FF] text-black h-full flex xl:flex-col xl:justify-center xl:items-center  gap-[20px] xl:rounded-full'}>*/}
+      {/*              <div>*/}
+      {/*                <div className={'md:text-[25px] text-[20px] sm:mb-[10px] mb-[4px] font-medium'}*/}
+      {/*                     style={{lineHeight: 1.1}}>Venue Rental:*/}
+      {/*                </div>*/}
+      {/*                <p*/}
+      {/*                  className={'md:text-[16px] text-[14px] font-medium opacity-70 sm:mt-[10px] mt-[3px] mb-[15px]'}>(Friday,*/}
+      {/*                  Saturday,*/}
+      {/*                  Sunday): </p>*/}
+      {/*              </div>*/}
+      {/*              <div className={"sm:w-fit w-[70%]"}>*/}
+      {/*                <p className={'md:text-[18px] text-[14px] font-medium  sm:mb-[15px] mb-[3px]'}>$6,000 for*/}
+      {/*                  exclusive*/}
+      {/*                  use </p>*/}
+      {/*                <p className={'md:text-[18px] text-[14px] font-medium '}>from 5:00 PM <br/>to 10:00 PM</p>*/}
+      {/*              </div>*/}
+      {/*            </div>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      </div>*/}
+      {/*      <div>*/}
+      {/*        {!isTable && (*/}
+      {/*          <ImageChanger*/}
+      {/*            swiperClass={'h-[343px]'}*/}
+      {/*            slideClass={'h-full w-full'}*/}
+      {/*            swiperSlideClass={'h-full w-full'}*/}
+      {/*            imgTemplate={'/pric/pric{**}.jpg'}*/}
+      {/*            classes={'h-full w-full object-cover'}*/}
+      {/*          />*/}
+      {/*        )}*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
 
       <div className={'bg-[#FAF5FF] lg:py-[200px] py-[90px]'}>
         <div className="container">
@@ -236,7 +237,7 @@ function EventsPage() {
 
       <EventsPackaj/>
 
-      <div className={'md:bg-gold bg-purple lg:py-[200px] pt-[100px] pb-[50px] text-black'}>
+      <div className={'md:bg-[#ABA3D2] bg-purple lg:py-[200px] pt-[100px] pb-[50px] text-black'}>
         <div className={'container '}>
           <div className={'flex justify-between'}>
             <div>
@@ -275,6 +276,9 @@ function EventsPage() {
 
         </div>
       </div>
+
+
+      <SelectDateSection />
     </div>
   );
 }
