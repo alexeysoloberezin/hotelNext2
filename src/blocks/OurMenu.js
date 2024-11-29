@@ -51,7 +51,7 @@ function OurMenu(props) {
                                     {isDesktop ? (
                                       <Zoom>
                                           <img
-                                            src={`/menu/menu_${index + 1}.jpg`}
+                                            src={`/menu/menu_${index}.jpg`}
                                             className={""}
                                             alt={`Menu ${index + 1}`}
                                           />
@@ -59,7 +59,7 @@ function OurMenu(props) {
                                     ) : (
                                       // <Zoom>
                                           <img
-                                            src={`/menu/menu_${index + 1}.jpg`}
+                                            src={`/menu/menu_${index}.jpg`}
                                             className={""}
                                             alt={`Menu ${index + 1}`}
                                           />
