@@ -37,7 +37,7 @@ function Button({
       data-aos={'fade-up'} data-aos-delay={delay}
       disabled={disabled} onClick={onClick} type={type} className={
       clsx(
-        " px-[20px] py-[10px] flex-nowrap uppercase border-1 border border-transparent rounded-[50px] flex items-center gap-[10px]  transition-all  text-nowrap",
+        " px-[20px] py-[10px] flex-nowrap uppercase border-1 border border-transparent  flex items-center gap-[10px]  transition-all  text-nowrap",
         colors[color],
         hoverColors[hoverColor || color],
         className,

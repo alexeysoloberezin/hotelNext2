@@ -16,7 +16,7 @@ function Weddings(props) {
     <div className={"bg-purple lg:py-[100px] py-[50px] text-black"}>
       <div className="container">
         <Animation>
-          <h2 className={"mb-[30px] bigMob"}>Weddings <br/>at Petal Restaurant</h2>
+          <h4 className={"mb-[30px] font-croisan sm:text-[50px] !leading-[1.3] text-[40px] uppercase"}>Weddings <br/>at Petal Restaurant</h4>
         </Animation>
         <div className={"grid lg:grid-cols-3 gap-[30px] mb-[50px]"}>
         <div>
@@ -48,23 +48,6 @@ function Weddings(props) {
             {isTable && (
               <Image
                 src={imgTemplate.replace('{**}', 2)}
-                noWebp={true}
-                className={"imgsFull"}
-              />
-            )}
-          </div>
-          <div>
-            <Animation>
-              <p className={"mb-[40px]"}>
-                <b>Please note:</b> We do not allow decorations on the walls, but our expert team of decorators,
-                florists,
-                and
-                wedding planners will ensure every detail is picture-perfect.
-              </p>
-            </Animation>
-            {isTable && (
-              <Image
-                src={imgTemplate.replace('{**}', 3)}
                 noWebp={true}
                 className={"imgsFull"}
               />

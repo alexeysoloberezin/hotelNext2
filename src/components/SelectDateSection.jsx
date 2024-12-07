@@ -157,7 +157,7 @@ function SelectDateSection() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-[#ABA3D2] text-black font2  h-[70px] text-[30px] px-6 md:w-[345px] max-w-full"
+                className="bg-[#ABA3D2] text-black uppercase font-light h-[70px] text-[30px] px-6 md:w-[345px] max-w-full"
               >
                 {loading ? 'Loading...' : 'Book'}
               </button>

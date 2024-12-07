@@ -44,6 +44,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Croisan';
+  src: url('fonts/croisan.woff2') format('woff2'),
+  url('fonts/croisan.otf') format('opentype');
+  font-weight: 400;
+}
+.font-croisan{
+  font-family: 'Croisan';
+}
+
 
 /**
 * This is a variable font

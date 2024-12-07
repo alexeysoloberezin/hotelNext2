@@ -10,6 +10,8 @@ import ImageChanger from "@/components/ui/ImageChanger";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Animation from "@/components/Animation";
 import SelectDateSection from "@/components/SelectDateSection";
+import {Autoplay} from "swiper/modules";
+import EvBlock from "@/blocks/EvBlock";
 
 function EventCard(props) {
   const {title, color, children, classes, titleClass} = props || {}
@@ -20,11 +22,44 @@ function EventCard(props) {
   }
 
   return (
-    <div className={clsx(colors[color], 'sm:p-[20px]  flex flex-col justify-center items-center text-center p-[16px] xl:rounded-full', classes, !classes ? 'xl:w-[200px] xl:h-[200px]' : '')}>
-      <div className={clsx(titleClass, 'md:text-[25px] text-[20px] sm:mb-[10px] mb-[7px] font-medium')}
+    <div className={clsx(colors[color], 'sm:p-[20px]  flex flex-col  p-[16px] !h-fit', classes, !classes ? 'xl:w-[200px]' : '')}>
+      <div className={clsx(titleClass, 'md:text-[25px] font-bold text-[20px] sm:mb-[10px] mb-[7px]')}
            style={{lineHeight: 1.25}}>{title}</div>
       <div>{children}</div>
     </div>
+  )
+}
+
+function CardM ({img, title,text, time, date, subtext}){
+  return (
+    <Animation className={"bg-[#FAF5FF] xl:p-[30px] sm:p-[20px] p-[24px] text-black"}>
+      <div className={'flex flex-col sm:items-center'}>
+        <img src={img} alt="" className={'h-[277px] w-full object-cover mb-[24px]'}/>
+        <div className={'sm:text-[25px] text-[20px] sm:mb-[18px] mb-[30px] font-bold text-center sm:mt-0 mt-[-60px] sm:text-black text-white'}>{title}</div>
+        <div className={'sm:space-y-[18px] space-y-[10px]'}>
+          <div className={'sm:text-center sm:px-[22px] sm:text-[17px] text-[14px]  leading-[1.4]'}>{text}</div>
+          {date && (
+            <div className={'sm:text-[17px] text-[14px] gap-[5px] flex items-center sm:justify-center'}>
+              <b className={'font-bold'}>Date:</b>
+              <div>{date}</div>
+            </div>
+          )}
+          {time && (
+            <div className={'sm:text-[17px] text-[14px] gap-[5px] flex items-center sm:justify-center'}>
+              <b className={'font-bold'}>Time:</b>
+              <div>{time}</div>
+            </div>
+          )}
+          {subtext && (
+            <div className={'sm:text-[17px] text-[14px] gap-[5px] flex items-center sm:justify-center'}>
+              <b className={'font-bold'}>Pre-Fix Menu: </b>
+              <div>{subtext}</div>
+            </div>
+          )}
+        </div>
+        <a href="#" className={"uppercase sm:mt-[36px] mt-[20px] bg-[#ABA3D2] text-black   h-[43px] text-[18px] px-[30px] w-[140px] flex items-center justify-center text-center"}>register</a>
+      </div>
+    </Animation>
   )
 }
 
@@ -39,10 +74,45 @@ function EventsPage() {
         videoWebM={'/ev/events.webm'}
         mobileGif={'/ev/events.gif'}
       >
+        <a href={'#'} className={"mt-[36px] bg-[#ABA3D2] text-black   h-[50px] text-[18px] font-bold px-[30px] rounded-full flex items-center justify-center text-center max-w-full"}>
+          SEND REQUEST
+        </a>
       </MainBlockTemplate>
 
-      <div className={'lg:bg-dark bg-[#5747A6] lg:py-[200px] py-[90px]'}>
-        <div className={'container '}>
+      <div className={'bg-[#ABA3D2]  md:py-[120px] pt-[80px] pb-[50px]'}>
+        <h3 className={'font-croisan sm:text-[50px] !leading-[1.2] text-[40px] text-center lg:mb-[75px] mb-[25px] uppercase text-black'}>our events</h3>
+
+        <div className={'container'}>
+          <div className={" grid lg:grid-cols-3 lg:max-w-full max-w-[600px] xl:gap-[60px] gap-[20px]"}>
+            <CardM
+              img={'/event/evv3.jpg'}
+              title={'Thanksgiving'}
+              text={'Welcome to the annual Thanksgiving Dinner at Iris Hotel Boston!. Indulge in traditional Thanksgiving dishes prepared by our talented chefs while enjoying the warm and cozy atmosphere of our hotel.'}
+              time={'2:00-6:00 PM'}
+              date={''}
+              subtext={'$45.00 Per Person Optional'}
+            />
+            <CardM
+              img={'/event/evv1.jpg'}
+              title={'Life Music'}
+              text={'We are hosting the Thanksgiving event. Welcome to an exciting night of Live Music\n' +
+                'with Chris! Get ready to groove to the soulful sounds of Chris as he takes the stage and entertains the crowd with his incredible talent. '}
+              date={'November 29th'}
+              time={'6:30 PM -8:30PM'}
+            />
+            <CardM
+              img={'/event/evv2.jpg'}
+              title={'Wine Tasting'}
+              text={'Don\'t miss out on this special event - reserve your spot today! We invite you to enjoy a complimentary wine tasting featuring a curated selection of six fine Italian wines, paired with delicious aperitivo snacks crafted by our chefs. '}
+              time={'4:00–6:00 PM'}
+              date={'December 5th'}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className={'bg-dark lg:py-[200px] py-[90px]'}>
+        <div className={'container text-[#D1B31C]'}>
           <div className={'flex justify-between'}>
             <div className={"lg:block hidden"}>
               <Animation> <img src="/event/ev1.jpg" className={'w-[264px] aspect-square'} alt=""/>
@@ -51,10 +121,12 @@ function EventsPage() {
             </div>
             <div className={"max-w-[638px] md:text-center sm:pt-[32px]"}>
               <Animation>
-                <h2 className={"mb-[25px] bigMob"}>Host Your Event <br/>at Petal Restaurant</h2>
+                <h4
+                  className={" text-[#D1B31C] font-croisan sm:text-[50px] !leading-[1.2] text-[40px] sm:text-center  mb-[10px] uppercase "}>Host
+                  Your Event <br/>at Petal Restaurant</h4>
               </Animation>
               <Animation>
-                <p className={"sm:mb-[30px]"}>Whether it's an intimate gathering, a grand wedding reception, or
+                <p className={"mb-[30px] mt-[20px]"}>Whether it's an intimate gathering, a grand wedding reception, or
                   a
                   corporate
                   event, Petal Restaurant
@@ -160,7 +232,7 @@ function EventsPage() {
           <div className={clsx('gap-[20px]', !isTable ? 'grid-cols-2 grid' : 'flex flex-col-reverse')}>
             <div>
               <ImageChanger
-                swiperClass={'h-[360px]'}
+                swiperClass={'!h-[376px]'}
                 slideClass={'h-full w-full'}
                 swiperSlideClass={'h-full w-full'}
                 imgTemplate={'/add/add{**}.jpg'}
@@ -168,18 +240,18 @@ function EventsPage() {
               />
             </div>
             <div>
-              <h2 className={'text-black mb-[30px] bigMob'}>Additional Services:</h2>
+              <h4 className={'text-black mb-[30px] font-croisan sm:text-[50px] !leading-[1.2] text-[40px]'}>Additional Services:</h4>
               <div className={"grid md:grid-cols-[2fr_1fr] md:gap-[20px] gap-[12px]"}>
                 <div className={"grid grid-cols-2 md:gap-[20px] gap-[12px]"}>
                   <EventCard color={'gold'} title={'Live Music:'}>
                     <p className={'md:text-[18px] text-[14px] font-medium leading-tight'}>Available for weekend
                       evenings</p>
                   </EventCard>
-                  <EventCard color={'gold'} title={'Decorators: '}>
+                  <EventCard color={'gold'} classes={"md:mt-[15px]"} title={'Decorators: '}>
                     <p className={'md:text-[18px] text-[14px] font-medium leading-tight'}>Available at an additional
                       charge</p>
                   </EventCard>
-                  <EventCard color={'gold'} title={'Custom Menu:'} classes={'col-span-2 '}>
+                  <EventCard color={'gold'} title={'Custom Menu:'} classes={'col-span-2 md:w-[314px]'}>
                     {/*<p className={'md:text-[16px] text-[14px] font-medium opacity-70 mt-[10px] mb-[9px]'}>(12:00 PM - 3:00 PM)</p>*/}
                     <p className={'md:text-[18px] text-[14px] font-medium leading-tight'}>Tailored to your preferences,
                       with final
@@ -188,7 +260,7 @@ function EventsPage() {
                   </EventCard>
                 </div>
                 <div>
-                  <EventCard color={'gold'} title={'Buffet or À la Carte: '} classes={'grid-rows-2 h-full'}>
+                  <EventCard color={'gold'} title={'Buffet or À la Carte: '} classes={'grid-rows-2 pb-[30px] '}>
                     <p className={'md:text-[18px] text-[14px] font-medium leading-tight md:mb-[15px]'}>Choose from our
                       flexible dining
                       options to suit
@@ -203,11 +275,11 @@ function EventsPage() {
       </div>
 
 
-      <div className={'bg-dark lg:py-[100px] py-[50px]'}>
+      <div className={'bg-dark lg:py-[100px] text-[#D1B31C] py-[85px]'}>
         <div className="container">
           <div className="max-w-[370px] mx-auto text-center lg:mb-[50px] mb-[30px]">
             <Animation>
-              <h2 className={'mb-[30px] bigMob'}>Catering</h2>
+              <h4 className={'mb-[30px] font-croisan  sm:text-[50px] !leading-[1.3] text-[40px] uppercase'}>Catering</h4>
             </Animation>
             <Animation>
               <p>Tailored to your preferences, with final approval by our chef, Igor</p>
@@ -237,48 +309,10 @@ function EventsPage() {
 
       <EventsPackaj/>
 
-      <div className={'md:bg-[#ABA3D2] bg-purple lg:py-[200px] pt-[100px] pb-[50px] text-black'}>
-        <div className={'container '}>
-          <div className={'flex justify-between'}>
-            <div>
-              {!isTable && (
-                <img src="/decor/decor1.jpg" className={'w-[267px] h-[236px] object-cover'} alt=""/>
-              )}
-            </div>
-            <div className={"max-w-[500px] text-center lg:pt-[90px]"}>
-              <Animation>
-                <h2 className={"mb-[25px] bigMob"}>Decorations <br className={'md:hidden'}/> for your <br/> holiday</h2>
-              </Animation>
-              <Animation>
-                <p className={"mb-[30px] max-w-[350px] mx-auto font-medium"}>
-                  Our wedding packages include live music, a projector for special moments, and customizable lunch or
-                  dinner receptions.
-                </p>
-              </Animation>
-              {isTable && (
-                <Animation>
-                  <img src="/decor/decor1.jpg" className={'w-full h-auto object-cover'} alt=""/>
-                </Animation>
-              )}
-            </div>
-            <div>
-              {!isTable && (
-                <img src="/decor/decor2.jpg" className={'w-[310px] h-[313px] object-cover mt-[-70px]'} alt=""/>
-              )}
-            </div>
-          </div>
-          {!isTable && (
-            <div className={"flex justify-around mt-[50px]"}>
-              <img src="/decor/decor3.jpg" className={'w-[327px] object-cover h-[225px]'} alt=""/>
-              <img src="/decor/decor4.jpg" className={'w-[418px] object-cover h-[276px] mt-[35px]'} alt=""/>
-            </div>
-          )}
-
-        </div>
-      </div>
+      <EvBlock />
 
 
-      <SelectDateSection />
+      <SelectDateSection/>
     </div>
   );
 }
