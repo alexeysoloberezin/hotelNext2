@@ -50,7 +50,7 @@ function ZBlock({title, text1, text2, imgTemplate, children}) {
                 modules={[Autoplay]}
                 className={"!mb-[00px] mt-[20px] md:!overflow-hidden !overflow-visible"}
                 loop={true}
-                autoplaySpeed={400}
+                autoplayspeed={400}
                 autoplay={{
                   delay: 2500,
                   disableOnInteraction: false,

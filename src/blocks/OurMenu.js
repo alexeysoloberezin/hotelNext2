@@ -35,7 +35,7 @@ function OurMenu(props) {
                         navigation={true}
                         className={"!mb-[0px] mt-[0px]"}
                         loop={true}
-                        autoplaySpeed={400}
+                        autoplayspeed={400}
                         slidesPerView={1}
                         spaceBetween={20}
                         breakpoints={{

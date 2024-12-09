@@ -16,6 +16,7 @@ const Header = ({transparent}) => {
 
   const navItems = [
     {
+      id: 1,
       to: '/accommodation',
       dataTestid: '',
       target: '',
@@ -24,6 +25,7 @@ const Header = ({transparent}) => {
       name: "Accommodation",
     },
     {
+      id: 2,
       dataTestid: '',
       target: '',
       className: '',
@@ -33,6 +35,7 @@ const Header = ({transparent}) => {
     },
 
     {
+      id: 3,
       dataTestid: '',
       target: '',
       className: '',
@@ -42,6 +45,7 @@ const Header = ({transparent}) => {
     },
 
     {
+      id: 4,
       dataTestid: '',
       target: '',
       className: '',
@@ -50,6 +54,7 @@ const Header = ({transparent}) => {
       name: "Spa Room"
     },
     {
+      id: 5,
       dataTestid: '',
       target: '',
       className: '',
@@ -58,6 +63,7 @@ const Header = ({transparent}) => {
       name: "About Us",
     },
     {
+      id: 6,
       dataTestid: '',
       target: '',
       className: '',
@@ -129,7 +135,7 @@ const Header = ({transparent}) => {
               <li 
                 onMouseEnter={() => setActiveLink(index)}
                 onMouseLeave={() => setActiveLink(false)}
-                key={index}
+                key={item.id}
                 className={clsx("2xl:text-[50px] md:text-[40px] text-[32px] opacity-0 mobMenu-link group 2xl:hover:text-[100px] xl:hover:text-[65px]  text-black transition-all duration-500 leading-tight font2 origin-left w-fit", {
                   'isAnimate': isActiveBurger,
                 })}>
@@ -152,7 +158,7 @@ const Header = ({transparent}) => {
                 //   src={el.img}
                 //   alt={"nav img"}
                 // />
-                <picture  className={clsx('fixed w-[520px] pointer-events-none object-cover h-full top-0 right-0 z-10 delay-300 transition-all duration-700', {
+                <picture key={'isT_' + index}  className={clsx('fixed w-[520px] pointer-events-none object-cover h-full top-0 right-0 z-10 delay-300 transition-all duration-700', {
                       'opacity-0': activeLink !== index,
                     })}>
                   <source srcSet={el.img + '.webp'} type="image/webp"/>

@@ -29,7 +29,7 @@ function Accommodation2(props) {
           modules={[Autoplay]}
           className={"!mb-[20px] md:mt-[50px] mt-[15px] md:!overflow-hidden !overflow-visible"}
           loop={true}
-          autoplaySpeed={400}
+          autoplayspeed={400}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,

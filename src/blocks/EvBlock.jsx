@@ -29,7 +29,7 @@ function EvBlock(props) {
           modules={[Autoplay]}
           className={"!mb-[0px] md:!overflow-hidden lg:h-[32vw] md:h-[50vw] h-[98vw]  !overflow-visible"}
           loop={true}
-          autoplaySpeed={400}
+          autoplayspeed={400}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,

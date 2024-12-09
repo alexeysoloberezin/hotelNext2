@@ -33,7 +33,7 @@ function Facilities(props) {
           <div data-aos={'fade-up'} data-aos-delay={'150'}>
             <div className={"flex md:flex-row flex-col items-center flex-wrap justify-around gap-x-[60px] gap-y-[20px]"}>
               {icons.map((ic, index) => (
-                <div className={"flex items-center gap-[15px]"}>
+                <div key={index + '_icons'} className={"flex items-center gap-[15px]"}>
                   <img src={`/icons/ficon${index + 1}.svg`} alt={'icon'} key={ic}/>
                   <span className={"text-[22px]"}>{ic}</span>
                 </div>

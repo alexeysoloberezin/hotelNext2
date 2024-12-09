@@ -21,7 +21,7 @@ function AboutBlock({imgTemplate}) {
           modules={[Autoplay]}
           className={"!mb-[0px] md:mt-[70px] mt-[50px] md:!overflow-hidden !overflow-visible"}
           loop={true}
-          autoplaySpeed={400}
+          autoplayspeed={400}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,

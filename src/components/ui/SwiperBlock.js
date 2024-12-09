@@ -28,7 +28,7 @@ function Slider({ slidesData }) {
     <div className={"relative"}>
       <Swiper
         modules={[Pagination, Autoplay]}
-        autoplaySpeed={400}
+        autoplayspeed={400}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

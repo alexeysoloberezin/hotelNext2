@@ -60,7 +60,7 @@ function Weddings(props) {
             modules={[Autoplay]}
             className={"!mb-[0px] md:!overflow-hidden !overflow-visible"}
             loop={true}
-            autoplaySpeed={400}
+            autoplayspeed={400}
             autoplay={{
               delay: 3500,
               disableOnInteraction: false,
