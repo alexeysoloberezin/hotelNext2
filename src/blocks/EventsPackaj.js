@@ -41,7 +41,7 @@ function EventsPackaj(props) {
       <div className="container">
         <div className={""}>
           <Animation>
-            <h4 className={"mb-[35px] font-croisan text-center sm:text-[50px] !leading-[1.3] text-[40px] uppercase"}>
+            <h4 className={"mb-[35px] font-croisan text-center sm:text-[50px] !leading-[1.3] text-[40px] "}>
               Special Event <br /> Packages
             </h4>
           </Animation>

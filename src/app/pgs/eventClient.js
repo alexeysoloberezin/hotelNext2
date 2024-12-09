@@ -80,7 +80,7 @@ function EventsPage() {
       </MainBlockTemplate>
 
       <div className={'bg-[#ABA3D2]  md:py-[120px] pt-[80px] pb-[50px]'}>
-        <h3 className={'font-croisan sm:text-[50px] !leading-[1.2] text-[40px] text-center lg:mb-[75px] mb-[25px] uppercase text-black'}>our events</h3>
+        <h3 className={'font-croisan sm:text-[50px] !leading-[1.2] text-[40px] text-center lg:mb-[75px] mb-[25px] text-black'}>Our events</h3>
 
         <div className={'container'}>
           <div className={" grid lg:grid-cols-3 lg:max-w-full max-w-[600px] xl:gap-[60px] gap-[20px]"}>
@@ -122,7 +122,7 @@ function EventsPage() {
             <div className={"max-w-[638px] md:text-center sm:pt-[32px]"}>
               <Animation>
                 <h4
-                  className={" text-[#D1B31C] font-croisan sm:text-[50px] !leading-[1.2] text-[40px] sm:text-center  mb-[10px] uppercase "}>Host
+                  className={" text-[#D1B31C] font-croisan sm:text-[50px] !leading-[1.2] text-[40px] sm:text-center  mb-[10px] "}>Host
                   Your Event <br/>at Petal Restaurant</h4>
               </Animation>
               <Animation>
@@ -279,7 +279,7 @@ function EventsPage() {
         <div className="container">
           <div className="max-w-[370px] mx-auto text-center lg:mb-[50px] mb-[30px]">
             <Animation>
-              <h4 className={'mb-[30px] font-croisan  sm:text-[50px] !leading-[1.3] text-[40px] uppercase'}>Catering</h4>
+              <h4 className={'mb-[30px] font-croisan  sm:text-[50px] !leading-[1.3] text-[40px]'}>Catering</h4>
             </Animation>
             <Animation>
               <p>Tailored to your preferences, with final approval by our chef, Igor</p>

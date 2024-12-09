@@ -16,7 +16,7 @@ function Weddings(props) {
     <div className={"bg-purple lg:py-[100px] py-[50px] text-black"}>
       <div className="container">
         <Animation>
-          <h4 className={"mb-[30px] font-croisan sm:text-[50px] !leading-[1.3] text-[40px] uppercase"}>Weddings <br/>at Petal Restaurant</h4>
+          <h4 className={"mb-[30px] font-croisan sm:text-[50px] !leading-[1.3] text-[40px] "}>Weddings <br/>at Petal Restaurant</h4>
         </Animation>
         <div className={"grid lg:grid-cols-3 gap-[30px] mb-[50px]"}>
         <div>
