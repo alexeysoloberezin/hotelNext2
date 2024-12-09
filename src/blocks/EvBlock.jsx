@@ -10,8 +10,8 @@ function EvBlock(props) {
         <div className={'flex justify-between'}>
           <div className={"max-w-[600px] mx-auto text-center "}>
             <Animation>
-              <h4 className={"mb-[25px] font-croisan text-center sm:text-[50px] !leading-[1.2] text-[40px] "}>Decorations for your
-                holiday</h4>
+              <h4 className={"mb-[25px] font-croisan text-center sm:text-[50px] !leading-[1.2] text-[40px] "}>Decorations For Your
+                Holiday</h4>
             </Animation>
             <Animation>
               <p className={"mb-[50px] max-w-[350px] mx-auto font-medium"}>
