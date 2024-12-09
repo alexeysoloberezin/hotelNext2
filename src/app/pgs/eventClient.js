@@ -80,7 +80,7 @@ function EventsPage() {
       </MainBlockTemplate>
 
       <div className={'bg-[#ABA3D2]  md:py-[120px] pt-[80px] pb-[50px]'}>
-        <h3 className={'font-croisan sm:text-[50px] !leading-[1.2] text-[40px] text-center lg:mb-[75px] mb-[25px] text-black'}>Our events</h3>
+        <h3 className={'font-croisan sm:text-[50px] !leading-[1.2] text-[40px] text-center lg:mb-[75px] mb-[25px] text-black'}>Our Events</h3>
 
         <div className={'container'}>
           <div className={" grid lg:grid-cols-3 lg:max-w-full max-w-[600px] xl:gap-[60px] gap-[20px]"}>
