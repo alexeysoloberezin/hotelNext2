@@ -62,15 +62,7 @@ const Header = ({transparent}) => {
       img: "/navImg1",
       name: "About Us",
     },
-    {
-      id: 6,
-      dataTestid: '',
-      target: '',
-      className: '',
-      to: "/events",
-      img: "/navImg6",
-      name: "Events"
-    },
+    
   ];
 
   const handleClickLink = (e, to) => {
