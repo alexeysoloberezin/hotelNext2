@@ -74,7 +74,7 @@ function EventsPage() {
         videoWebM={'/ev/events.webm'}
         mobileGif={'/ev/events.gif'}
       >
-        <a href={'#'} className={"mt-[36px] bg-[#ABA3D2] text-black   h-[50px] text-[18px] font-bold px-[30px] rounded-full flex items-center justify-center text-center max-w-full"}>
+        <a data-testid="linkElement" href="?sbe_internalLink" target="_self"  className={"mt-[36px] Y3Mib0 bg-[#ABA3D2] text-black   h-[50px] text-[18px] font-bold px-[30px] rounded-full flex items-center justify-center text-center max-w-full"}>
           SEND REQUEST
         </a>
       </MainBlockTemplate>
