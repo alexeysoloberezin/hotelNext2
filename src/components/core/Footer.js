@@ -56,7 +56,7 @@ const Footer = () => {
         <div className={"mb-[40px] "}><img className={"w-[108px]"} src="/logoBlack.png" alt=""/></div>
         <div  className={"grid lg:grid-cols-3 lg:gap-[15px] gap-[50px] lg:min-h-[400px]"}>
           <div className={"flex flex-col gap-[20px]"}>
-            <p>At IRIS HOTEL Boston, w </p>
+            <p>At IRIS HOTEL Boston</p>
             <a href="mailto:info@irishotelboston.com">info@irishotelboston.com</a>
             <a href="tel:+18575766900" className={"underline"}>+1 857 576-6900</a>
             <div className={"mt-auto"}>
