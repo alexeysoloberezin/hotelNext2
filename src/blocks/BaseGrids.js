@@ -1,9 +1,7 @@
 'use client'
-
+import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
-import Image from "../components/ui/Image";
 import clsx from "clsx";
-import Animation from "../components/Animation";
 
 function BaseGrids({title, imgTemplate, texts}) {
   return (
@@ -14,7 +12,7 @@ function BaseGrids({title, imgTemplate, texts}) {
         </div>
         <div className={"grid lg:grid-cols-3 gap-[20px]"}>
           {texts.map((text, i) => (
-            <div  data-aos={'fade-up'} data-aos-delay={i * 100}>
+            <div key={uuidv4()} data-aos={'fade-up'} data-aos-delay={i * 100}>
               <img className={clsx("w-full aspect-square object-cover",
               )} src={imgTemplate.replace('{**}', i + 1)}  alt="accom-img"></img>
               <p className={"mt-[20px]"}>{text}</p>

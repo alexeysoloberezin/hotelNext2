@@ -1,5 +1,5 @@
 'use client';
-
+import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
 import Form from "../../blocks/Form";
 
@@ -69,7 +69,7 @@ const Footer = () => {
           <div className={"flex flex-col justify-between"}>
             <ul className={"flex flex-col gap-[20px] mb-auto"}>
               {navItems.map((item, index) => (
-                <li key={index + '_footerNav'}><a className={`uppercase ${item.className}`} data-testid={item.dataTestid} target={item.target} href={item.to}>{item.name}</a></li>
+                <li key={uuidv4()}><a className={`uppercase ${item.className}`} data-testid={item.dataTestid} target={item.target} href={item.to}>{item.name}</a></li>
               ))}
             </ul>
             {/* <div className={"hidden"}>

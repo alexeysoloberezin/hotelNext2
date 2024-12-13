@@ -1,5 +1,5 @@
 'use client'
-
+import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
 import {Autoplay} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -41,7 +41,7 @@ function AboutBlock({imgTemplate}) {
         >
 
           {arr.map((item, index) => (
-            <SwiperSlide key={item}>
+            <SwiperSlide key={uuidv4()}>
               <div className="slide-content">
                 <img
                   src={imgTemplate.replace('{**}', index + 1)}
