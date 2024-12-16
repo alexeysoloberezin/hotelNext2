@@ -43,7 +43,7 @@ function Accommodation2(props) {
               <div className="slide-content">
                 <Image
                   src={item.img}
-                  className={"imgsFull md:aspect-auto aspect-square"}
+                  className={"imgsFull md:aspect-auto aspect-square object-cover"}
                 />
               </div>
             </SwiperSlide>
