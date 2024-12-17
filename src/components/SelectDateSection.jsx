@@ -106,12 +106,12 @@ function SelectDateSection() {
               {/* Name */}
               <div>
                 <label className="block font-medium text-[30px] mb-[15px] font2">
-                  Firstname and Lastname
+                  First Name and Last Name
                 </label>
                 <input
                   type="text"
                   {...register("name")}
-                  placeholder="Firstname and Lastname"
+                  placeholder="First Name and Last Name"
                   className={`w-full border-b bg-transparent placeholder:text-[#969086] text-[18px] outline-none py-1 ${
                     errors.name ? "border-red" : "border-gray-300"
                   } `}
