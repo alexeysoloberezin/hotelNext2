@@ -20,6 +20,8 @@ function Home() {
     <div className={clsx(' relative  flex flex-col homePage')}>
       <MainBlock />
 
+      <img src="" alt=""/>
+
       <div style={{minHeight: '80vh'}}>
         <Accommodation/>
       </div>

@@ -12,6 +12,8 @@ import Animation from "@/components/Animation";
 import SelectDateSection from "@/components/SelectDateSection";
 import {Autoplay} from "swiper/modules";
 import EvBlock from "@/blocks/EvBlock";
+import {v4 as uuidv4} from "uuid";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 function EventCard(props) {
   const {title, color, children, classes, titleClass} = props || {}
@@ -111,18 +113,13 @@ function EventsPage() {
         </div>
       </div>
 
-      <div className={'bg-dark lg:py-[200px] py-[90px]'}>
-        <div className={'container text-[#D1B31C]'}>
-          <div className={'flex justify-between'}>
-            <div className={"lg:block hidden"}>
-              <Animation> <img src="/event/ev1.jpg" className={'w-[264px] aspect-square'} alt=""/>
-              </Animation>
-
-            </div>
-            <div className={"max-w-[638px] md:text-center sm:pt-[32px]"}>
+      <div className={'bg-[#FAF5FF] lg:pt-[200px] lg:pb-[70px] pb-[40px] pt-[90px]'}>
+        <div className={'container text-[#100F0D]'}>
+          <div className={'flex justify-between mx-auto'}>
+            <div className={"max-w-[638px] mx-auto md:text-center sm:pt-[32px]"}>
               <Animation>
                 <h4
-                  className={" text-[#D1B31C] font-croisan sm:text-[50px] !leading-[1.2] text-[40px] sm:text-center  mb-[10px] "}>Host
+                  className={" text-[#100F0D] font-croisan sm:text-[60px] !leading-[1.2] text-[40px] sm:text-center  mb-[10px] "}>Host
                   Your Event <br/>at Petal Restaurant</h4>
               </Animation>
               <Animation>
@@ -137,24 +134,45 @@ function EventsPage() {
               </Animation>
 
               <div className={"justify-center md:flex hidden"}>
-                <BookNow color={'white'} hoverColor={'purple'}/>
+                <BookNow color={'purple'} hoverColor={'purple'}/>
               </div>
             </div>
-            <div className={'lg:block hidden'}>
-              <Animation>
-                <img src="/event/ev2.jpg" className={'w-[269px] aspect-square mt-[-70px]'} alt=""/>
-              </Animation>
 
-            </div>
+
           </div>
-          <div className={"md:flex justify-around  md:mt-[50px] mt-[20px] md:gap-[20px]"}>
-            <Animation> <img src="/event/ev3.jpg" className={'lg:w-[292px] md:block hidden object-cover lg:h-[292px]'}
-                             alt=""/>
-            </Animation>
+          <div className={''}>
 
-            <Animation> <img src="/event/ev4.jpg" className={'lg:w-[328px] w-full max-w-[400px] object-cover lg:h-[328px]'} alt=""/>
-            </Animation>
+            <Swiper
+              modules={[Autoplay]}
+              className={"!mb-[0px] md:mt-[50px] mt-[30px] md:!overflow-hidden !overflow-visible"}
+              loop={true}
+              autoplayspeed={400}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              slidesPerView={1}
+              spaceBetween={20}
+              breakpoints={{
+                700: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                },
+              }}
+            >
 
+              {[1,2,3].map((item, index) => (
+                <SwiperSlide key={uuidv4()}>
+                  <div className="slide-content">
+                    <img src={`/event/ev${item}.jpg`} className={'object-cover w-full h-full'} alt=""/>
+                  </div>
+                </SwiperSlide>
+                ))}
+            </Swiper>
           </div>
         </div>
       </div>
