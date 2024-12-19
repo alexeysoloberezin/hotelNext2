@@ -93,6 +93,7 @@
         font-size: 28px !important;
     }
 }
+
 .rdp-root th{
     font-size: 22px !important;
     @media (max-width: 700px) {

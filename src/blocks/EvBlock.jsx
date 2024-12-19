@@ -54,7 +54,7 @@ function EvBlock(props) {
 
           {[1,1,1,1].map((item, index) => (
             <SwiperSlide key={'wed_3_' + index}>
-              <div className="slide-content h-full">
+              <div className="slide-content h-full border border-black ">
                 <img src={`/decor/dc_${index + 1}.png`} className={'w-full h-full object-cover'} alt=""/>
               </div>
             </SwiperSlide>

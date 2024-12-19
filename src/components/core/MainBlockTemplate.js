@@ -4,7 +4,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Header from "./Header";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
-function MainBlockTemplate({video, videoWebM, preview, image, mobileGif, title, description, children}) {
+function MainBlockTemplate({video, videoWebM, preview, image,titleClass, mobileGif, title, description, children}) {
   const isMobile = useMediaQuery(false, '(max-width: 600px)');
 
   return (
@@ -44,7 +44,7 @@ function MainBlockTemplate({video, videoWebM, preview, image, mobileGif, title, 
         <Header transparent={true}/>
 
         <div className={"relative z-10 text-center flex grow h-full justify-center flex-col items-center"}>
-          <h1 data-aos={'fade-up'}>{title} </h1>
+          <h1 data-aos={'fade-up'} className={titleClass}>{title} </h1>
 
           <h3 data-aos={'fade-up'} data-aos-delay={'150'} className={"mt-2 lg:mb-[30px] mb-[25px]"}>
             {description}

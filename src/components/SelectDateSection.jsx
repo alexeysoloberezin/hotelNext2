@@ -11,10 +11,10 @@ import Animation from "@/components/Animation";
 
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
-  phone: z
+  eventType: z.string().min(1, "Please select an event type"),
+  email: z
     .string()
-    .regex(/^\+\d{1,15}$/, "Invalid phone number format"),
-  specialRequests: z.string().optional(),
+    .min(1, "Email is required"),
 });
 
 
@@ -27,15 +27,16 @@ function SelectDateSection() {
     register,
     handleSubmit,
     formState: {errors},
+    watch
   } = useForm({
     resolver: zodResolver(schema),
   });
+  const eventType = watch("eventType");
 
   const onSubmit = async (data) => {
     setLoading(true)
-
     try {
-      const message = `Name: ${data.name}\nPhone: ${data.phone}\nSpecial requirements: ${data.specialRequests}\nDates: ${formatSelectedDate()}`;
+      const message = `Name: ${data.name}\nEmail: ${data.email}\nType: ${data.eventType}\nDates: ${formatSelectedDate()}`;
       const res = await fetch(`/api/send-email`, {
         method: 'POST',
         headers: {
@@ -54,6 +55,8 @@ function SelectDateSection() {
       setLoading(false)
     }
   };
+
+  const [toggle, setToggle] = useState(false)
   const formatSelectedDate = () => {
     if (!selected?.from || !selected?.to) return "";
     const from = selected.from.toLocaleDateString();
@@ -65,7 +68,9 @@ function SelectDateSection() {
     <div className={"bg-[#FAF5FF] py-[100px]"}>
       <div className="container">
         <Animation>
-          <h4 className={"mb-[25px] font-croisan text-black text-center sm:text-[50px] !leading-[1.2] text-[40px] "}>Book Here</h4>
+          <h4
+            className={"mb-[25px] font-croisan text-black text-center sm:text-[50px] !leading-[1.2] text-[40px] "}>Book
+            Here</h4>
         </Animation>
         <div className={"xl:grid flex flex-col items-center xl:grid-cols-[520px_1fr] gap-[30px]"}>
           <div className={clsx("w-fit transition-all", {
@@ -106,7 +111,7 @@ function SelectDateSection() {
                 <input
                   type="text"
                   {...register("name")}
-                  placeholder="First Name and Last Name"
+                  placeholder="ENTER YOUR NAME"
                   className={`w-full border-t bg-transparent placeholder:text-[#969086] md:text-[25px] text-[20px] outline-none py-1 ${
                     errors.name ? "border-red" : "border-gray-300"
                   } `}
@@ -120,18 +125,18 @@ function SelectDateSection() {
 
               {/* Phone */}
               <div className={'bg-[#fff] p-[10px] rounded-[8px]'}>
-                <label className="block  md:text-[30px] text-[20px] mb-[15px] uppercase">Number</label>
+                <label className="block  md:text-[30px] text-[20px] mb-[15px] uppercase">EMAIL</label>
                 <input
                   type="text"
-                  {...register("phone")}
-                  placeholder="+186 78654765"
+                  {...register("email")}
+                  placeholder="EXIMPLE@GMAIL.COM"
                   className={`w-full border-t bg-transparent placeholder:text-[#969086] md:text-[25px] text-[20px] outline-none py-1 ${
-                    errors.phone ? "border-red" : "border-gray-300"
+                    errors.email ? "border-red" : "border-gray-300"
                   } `}
                 />
-                {errors.phone && (
+                {errors.email && (
                   <p className="text-red text-sm mt-1">
-                    {errors.phone.message}
+                    {errors.email.message}
                   </p>
                 )}
               </div>
@@ -150,16 +155,55 @@ function SelectDateSection() {
                 />
               </div>
 
-              {/* Special requirements */}
-              <div className={"bg-[#fff] p-[10px] rounded-[8px]"}>
-                <label className="block  md:text-[30px] text-[20px] mb-[15px] uppercase">
-                  Special requirements
+              <div className={'bg-[#fff] p-[10px] rounded-[8px]'}>
+                <label onClick={(e) => setToggle(!toggle)}
+                       className="block  md:text-[30px] flex justify-between pr-[5px] cursor-pointer items-center text-[20px] mb-[15px] uppercase">EVENT
+                  TYPE
+                  <svg style={{transform: toggle ? 'rotate(180deg)' : ''}}  width="16" height="10" viewBox="0 0 16 10"
+                       fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.9999 0.607578C15.9999 0.464153 15.9462 0.317376 15.8419 0.207306C15.6334 -0.0128355 15.2922 -0.0128355 15.0837 0.207306L7.94701 7.74212L0.914574 0.317375C0.706064 0.0972347 0.364868 0.0972347 0.156359 0.317375C-0.0521507 0.537517 -0.0521507 0.897747 0.156359 1.11789L7.5679 8.94622C7.77641 9.16636 8.11761 9.16636 8.32612 8.94622L15.8419 1.01115C15.9493 0.897747 15.9999 0.754338 15.9999 0.607578Z"
+                      fill="black"/>
+                  </svg>
                 </label>
-                <textarea
-                  {...register("specialRequests")}
-                  placeholder="Table by the window, please"
-                  className="w-full  border-t bg-transparent placeholder:text-[#969086] md:text-[25px] text-[20px] py-1 outline-none"
-                />
+                <div className={clsx(`space-y-[10px] border-t pt-[10px] ${toggle ? 'hidden' : ''}`)}>
+                  <div className={"myRadio"}>
+                    <input
+                      type="radio"
+                      id={'item_1'}
+                      value="WEDDINGS"
+                      {...register("eventType", {required: "Please select an event type"})}
+                    />
+                    <label htmlFor="item_1">WEDDINGS</label>
+                  </div>
+                  <div className={"myRadio"}>
+                    <input
+                      type="radio"
+                      id={'item_2'}
+                      value="CORPORATE EVENTS"
+                      {...register("eventType")}
+                    />
+                    <label htmlFor="item_2">CORPORATE EVENTS</label>
+                  </div>
+                  <div className={"myRadio"}>
+                    <input
+                      type="radio"
+                      id={'item_3'}
+                      value="BIRTHDAYS"
+                      {...register("eventType")}
+                    />
+                    <label htmlFor="item_3">BIRTHDAYS</label>
+                  </div>
+                  {errors.eventType && (
+                    <p className="text-red text-sm mt-1">
+                      {errors.eventType.message}
+                    </p>
+                  )}
+                </div>
+                {toggle && (
+                  <div className={'border-t md:text-[25px] text-[20px] pt-[10px] opacity-[.6]'}>{eventType}</div>
+                )}
+
               </div>
 
               {/* Button */}

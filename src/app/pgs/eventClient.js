@@ -79,6 +79,7 @@ function EventsPage() {
     <div className={"event"}>
       <MainBlockTemplate
         title={'Events'}
+        titleClass={'font-croisan'}
         video={'/ev/events.mp4'}
         videoWebM={'/ev/events.webm'}
         mobileGif={'/ev/events.gif'}

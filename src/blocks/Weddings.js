@@ -8,7 +8,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import Animation from "../components/Animation";
 
 function Weddings(props) {
-  const arr = [1, 1, 1]
+  const arr = [1, 1, 1, 1, 1]
   const imgTemplate = '/wed/wed{**}.jpg'
   const isTable = useMediaQuery(false, '(max-width: 1024px)')
 

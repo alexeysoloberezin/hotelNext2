@@ -60,7 +60,39 @@
     }
   }
 }
-
+.myRadio{
+  cursor: pointer;
+  input{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+  }
+  label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    font-size: 25px;
+    color: rgba(16, 15, 13, 0.66);
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+    &:after{
+      content: '';
+      width: 27px;
+      display: block;
+      border-radius: 50%;
+      border: 1px solid #000;
+      height: 27px;
+    }
+  }
+  input:checked+label{
+    &:after{
+      background: #ABA3D2;
+    }
+  }
+}
 input {
   font-size: 16px;
 }
