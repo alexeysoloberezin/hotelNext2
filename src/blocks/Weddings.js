@@ -14,18 +14,14 @@ function Weddings(props) {
 
   return (
     <div className={"bg-purple lg:py-[100px] py-[50px] text-black"}>
-      <div className="container">
+      <div className="container text-center">
         <Animation>
           <h4 className={"mb-[30px] font-croisan sm:text-[50px] !leading-[1.3] text-[40px] "}>Weddings <br/>at Petal Restaurant</h4>
         </Animation>
-        <div className={"grid lg:grid-cols-3 gap-[30px] mb-[50px]"}>
-        <div>
+        <div className={"max-w-[553px] mx-auto"}>
           <Animation>
             <p className={"mb-[40px]"}>
-              Make your big day even more special with our exclusive wedding packages. Book 10 or more rooms at IRIS
-              Boston Hotel, and receive a complimentary night in the luxurious Iris Suite (or standard rate if fewer
-              rooms
-              are booked).
+              Make your big day even more special with our exclusive wedding packages. Book 10 or more rooms at IRIS Boston Hotel, and receive a complimentary night in the luxurious Iris Suite (or standard rate if fewer rooms are booked).
             </p>
           </Animation>
           {isTable && (
@@ -35,24 +31,6 @@ function Weddings(props) {
               className={"imgsFull"}
             />
           )}
-        </div>
-          <div>
-            <Animation>
-              <p className={"mb-[40px]"}>
-                Our wedding packages include live music, a projector for special moments, and customizable lunch or
-                dinner
-                receptions.
-              </p>
-            </Animation>
-
-            {isTable && (
-              <Image
-                src={imgTemplate.replace('{**}', 2)}
-                noWebp={true}
-                className={"imgsFull"}
-              />
-            )}
-          </div>
         </div>
 
         {!isTable && (
@@ -80,24 +58,16 @@ function Weddings(props) {
           >
 
             {arr.map((item, index) => (
-              <SwiperSlide key={'wed_' + index}>
-                <div className="slide-content">
-                  <Image
-                    src={imgTemplate.replace('{**}', index + 1)}
-                    noWebp={true}
-                    className={"imgsFull"}
-                  />
+              <SwiperSlide key={'wed_' + index} className={"bg-black"}>
+                <div className="slide-content bg-black">
+                  <img  className={"border border-1 border-black"} src={imgTemplate.replace('{**}', index + 1)} alt=""/>
                 </div>
               </SwiperSlide>
             ))}
             {arr.map((item, index) => (
-              <SwiperSlide key={'wed_2_' + index}>
-                <div className="slide-content">
-                  <Image
-                    src={imgTemplate.replace('{**}', index + 1)}
-                    noWebp={true}
-                    className={"imgsFull"}
-                  />
+              <SwiperSlide key={'wed_2_' + index} className={'bg-black'}>
+                <div className="slide-content bg-black">
+                  <img  className={"border border-1 border-black"} src={imgTemplate.replace('{**}', index + 1)} alt=""/>
                 </div>
               </SwiperSlide>
             ))}

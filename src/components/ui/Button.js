@@ -19,7 +19,7 @@ function Button({
                   size = 'def'
                 }) {
   const colors = {
-    'purple': 'bg-purple text-black ',
+    'purple': 'bg-purple text-[#5747A6] font-bold border border-1 border-[#5747A6]',
     'white': 'bg-white text-black ',
     'black': "bg-black text-white",
     'red': "bg-red text-white border border-red border-1"

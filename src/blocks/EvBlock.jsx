@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 
 function EvBlock(props) {
   return (
-    <div className={'md:bg-[#ABA3D2] bg-purple lg:pt-[150px] pt-[100px]  text-black'}>
+    <div className={'md:bg-[#ABA3D2] bg-purple pb-[80px] lg:pt-[150px] pt-[100px]  text-black'}>
       <div className={'container '}>
         <div className={'flex justify-between'}>
           <div className={"max-w-[600px] mx-auto text-center "}>
@@ -14,7 +14,7 @@ function EvBlock(props) {
                 Holiday</h4>
             </Animation>
             <Animation>
-              <p className={"mb-[50px] max-w-[350px] mx-auto font-medium"}>
+              <p className={"md:mb-[50px] mb-[20px] max-w-[350px] mx-auto font-medium"}>
                 Our wedding packages include live music, a projector for special moments, and customizable lunch or
                 dinner receptions.
               </p>
