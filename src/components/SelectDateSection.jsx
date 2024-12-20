@@ -129,7 +129,7 @@ function SelectDateSection() {
                 <input
                   type="text"
                   {...register("email")}
-                  placeholder="EXIMPLE@GMAIL.COM"
+                  placeholder="EXAMPLE@GMAIL.COM"
                   className={`w-full border-t bg-transparent placeholder:text-[#969086] md:text-[25px] text-[20px] outline-none py-1 ${
                     errors.email ? "border-red" : "border-gray-300"
                   } `}

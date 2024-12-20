@@ -38,7 +38,7 @@ function EventsPackaj(props) {
   const imgTemplate = '/ev/ev{**}.jpg';
 
   return (
-    <div className={"bg-[#fff] lg:py-[70px] py-[100px] text-black"}>
+    <div className={"bg-[#FAF5FF] lg:py-[70px] py-[100px] text-black"}>
       <div className="container">
         <div className={""}>
           <Animation>

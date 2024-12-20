@@ -99,8 +99,8 @@ function EventsPage() {
           <div className={" grid lg:grid-cols-3 lg:max-w-full max-w-[600px] xl:gap-[60px] gap-[20px]"}>
             <CardM
               img={'/event/evv3.jpg'}
-              title={'Thanksgiving'}
-              text={'Welcome to the annual Thanksgiving Dinner at Iris Hotel Boston!. Indulge in traditional Thanksgiving dishes prepared by our talented chefs while enjoying the warm and cozy atmosphere of our hotel.'}
+              title={'Christmas Dinner'}
+              text={'Welcome to the annual Christmas Dinner at Iris Hotel Boston! Indulge in traditional Christmas dishes prepared by our talented chefs while enjoying the warm and cozy atmosphere of our hotel.'}
               time={'2:00-6:00 PM'}
               date={''}
               subtext={'$45.00 Per Person Optional'}
@@ -110,8 +110,9 @@ function EventsPage() {
               title={'Life Music'}
               text={'Welcome to an exciting night of Live Music\n' +
                 'with Chris! Get ready to groove to the soulful sounds of Chris as he takes the stage and entertains the crowd with his incredible talent. '}
-              date={'November 29th'}
-              time={'6:30 PM -8:30PM'}
+              date={'Live Music will take place on Friday Nights'}
+
+              dateLabel={'Date and Time: '}
             />
             <CardM
               img={'/event/evv2.jpg'}
@@ -290,7 +291,7 @@ function EventsPage() {
       </div>
 
 
-      <div className={'bg-[#fff] text-black lg:py-[100px] text-[#D1B31C] py-[85px]'}>
+      <div className={'bg-[#FAF5FF] text-black lg:py-[100px] text-[#D1B31C] py-[85px]'}>
         <div className="container">
           <div className="max-w-[370px] mx-auto text-center lg:mb-[50px] mb-[30px]">
             <Animation>
